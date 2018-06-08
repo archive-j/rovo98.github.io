@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/tracert1.png">
 <meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/tracert2.png">
 <meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/tracert3.png">
-<meta property="og:updated_time" content="2018-06-08T09:50:17.530Z">
+<meta property="og:updated_time" content="2018-06-08T10:04:13.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ensp进行简单的路由器互连实验">
 <meta name="twitter:description" content="一次简单的测试">
@@ -102,7 +102,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><ul>
+        <p>简单使用ensp做华为AR1220路由互连的实验。</p>
+<a id="more"></a>
+<h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><ul>
 <li>路由器设置</li>
 <li>手动设置静态路由</li>
 </ul>
@@ -131,9 +133,9 @@
 <ul>
 <li>配置 192.168.11.1作为192.168.11.0网段的网关：</li>
 </ul>
-<p><img src="gateway1.png" alt="range1_gateway"></p>
+<p><img src="gateway1.png" alt="设置网关"></p>
 <p>所有主机经过配置后，他们应该可以ping通自己网段下的所有主机，如：192.168.11.12 ping 192.168.11.11</p>
-<p><img src="pingTest.png" alt="pingTest"></p>
+<p><img src="pingTest.png" alt="局域网ping测试"></p>
 <ul>
 <li><strong>[需要注意的是]</strong>： 由于路由器互连时使用的是Serial串口，所以路由器之间配置的是serial串口的ip作为接口：</li>
 </ul>
@@ -150,34 +152,34 @@
 <ul>
 <li>AR6路由表：</li>
 </ul>
-<p><img src="route1_info.png" alt="route1_info"></p>
+<p><img src="route1_info.png" alt="AR6路由表"></p>
 <ul>
 <li>AR4路由表：</li>
 </ul>
-<p><img src="route2_info.png" alt="route2_info"></p>
+<p><img src="route2_info.png" alt="AR4路由表"></p>
 <ul>
 <li>AR7路由表：</li>
 </ul>
-<p><img src="route3_info.png" alt="route3_info"></p>
+<p><img src="route3_info.png" alt="AR7路由表"></p>
 <h3 id="测试实验结果"><a href="#测试实验结果" class="headerlink" title="测试实验结果"></a>测试实验结果</h3><p>使用任意一个局域网下的主机ping不同局域网下的主机：</p>
 <ul>
 <li>192.168.11.11 ping 192.168.13.12 和 192.168.12.12:</li>
 </ul>
-<p><img src="tracert1.png" alt="tracertTest1"></p>
+<p><img src="tracert1.png" alt="tracert测试1"></p>
 <ul>
 <li>192.168.12.11 ping 192.168.11.12 和 192.168.13.13:</li>
 </ul>
-<p><img src="tracert2.png" alt="tracertTest2"></p>
+<p><img src="tracert2.png" alt="tracert测试2"></p>
 <ul>
 <li>192.168.13.11 ping 192.168.11.11 和 192.168.12.11：</li>
 </ul>
-<p><img src="tracert3.png" alt="tracertTest3"></p>
+<p><img src="tracert3.png" alt="tracert测试3"></p>
 <p>由以上测试可以看出简单的路由器连接实验成功。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/" data-id="cji5sh52100002cjvrov6o0op" class="article-share-link">Share</a>
+      <a data-url="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/" data-id="cji5sj1v900013cjvu5pxbtid" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由器连接，简单/">路由器连接，简单</a></li></ul>

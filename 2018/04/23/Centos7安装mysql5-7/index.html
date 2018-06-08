@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>CentOS7通过yum(yellow dog update modifier) 安装mysql5.7 | rovo98&#39;s Blog -&gt; Leave your comfort zone!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="notes for install mysql in centos7">
+<meta name="keywords" content="mysql5.7安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7通过yum(yellow dog update modifier) 安装mysql5.7">
+<meta property="og:url" content="http://rovo98.github.io/2018/04/23/Centos7安装mysql5-7/index.html">
+<meta property="og:site_name" content="rovo98&#39;s Blog -&gt; Leave your comfort zone!">
+<meta property="og:description" content="notes for install mysql in centos7">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://rovo98.github.io/2018/04/23/Centos7安装mysql5-7/repo-resource.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/04/23/Centos7安装mysql5-7/mysql-status.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/04/23/Centos7安装mysql5-7/temporary-password.png">
+<meta property="og:updated_time" content="2018-06-08T13:25:14.915Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS7通过yum(yellow dog update modifier) 安装mysql5.7">
+<meta name="twitter:description" content="notes for install mysql in centos7">
+<meta name="twitter:image" content="http://rovo98.github.io/2018/04/23/Centos7安装mysql5-7/repo-resource.png">
+  
+    <link rel="alternate" href="/atom.xml" title="rovo98&#39;s Blog -&gt; Leave your comfort zone!" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">rovo98&#39;s Blog -&gt; Leave your comfort zone!</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://rovo98.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Centos7安装mysql5-7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/23/Centos7安装mysql5-7/" class="article-date">
+  <time datetime="2018-04-22T16:00:00.000Z" itemprop="datePublished">2018-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mysql/">mysql</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CentOS7通过yum(yellow dog update modifier) 安装mysql5.7
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CentOS7下安装mysql.</p>
+<a id="more"></a>
+<h3 id="1-配置yum源"><a href="#1-配置yum源" class="headerlink" title="1.配置yum源"></a>1.配置yum源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载mysql安装源包</span></span><br><span class="line">root @~&gt; wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</span><br><span class="line"><span class="comment"># 安装mysql源</span></span><br><span class="line">root @~&gt; yum localinstall mysql57-community-release-el7-8.noarch.rpm</span><br></pre></td></tr></table></figure>
+<p>检查mysql源是否安装成功:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root @~&gt; yum repolist enabled | grep <span class="string">"mysql.*-community.*"</span></span><br></pre></td></tr></table></figure>
+<p>如下图则安装成功:</p>
+<p><img src="repo-resource.png" alt="mysql_source"></p>
+<h3 id="2-安装mysql"><a href="#2-安装mysql" class="headerlink" title="2.安装mysql"></a>2.安装mysql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; yum install -y mysql-community-server</span><br></pre></td></tr></table></figure>
+<h3 id="3-启动MySQL服务并设置开机自动启动"><a href="#3-启动MySQL服务并设置开机自动启动" class="headerlink" title="3.启动MySQL服务并设置开机自动启动"></a>3.启动MySQL服务并设置开机自动启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; systemctl start mysqld</span><br></pre></td></tr></table></figure>
+<p>查看MySQL启动状态</p>
+<p><img src="mysql-status.png" alt="mysqld进程状态"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; systemctl <span class="built_in">enable</span> mysqld</span><br><span class="line">root@ ~&gt; systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<h3 id="5-修改默认密码"><a href="#5-修改默认密码" class="headerlink" title="5.修改默认密码"></a>5.修改默认密码</h3><p>刚安装完的mysql会自动给root用户分配一个临时密码，而且必须重新设置密码(从5.5版本开始)</p>
+<ul>
+<li>先查看root用户的临时密码</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; grep <span class="string">"temporary password"</span> /var/<span class="built_in">log</span>/mysqld.log</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用临时的密码登录进mysql来设置新的密码</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> PASSWORD = PASSWORD(<span class="string">'[YOUR_NEW_PASSWORD]'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="temporary-password.png" alt="查看临时密码"></p>
+<ul>
+<li>可能遇到的问题：设置的密码过于简单mysql报错:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your password does not satisfy the current policy requirements.</span><br></pre></td></tr></table></figure>
+<p>解决方法：由于刚安装的mysql的密码默认强度是最高的，若想要设置简单的密码就要修改<strong>validate_password_policy</strong>的值，</p>
+<h4 id="validate-password-policy有以下取值："><a href="#validate-password-policy有以下取值：" class="headerlink" title="validate_password_policy有以下取值："></a>validate_password_policy有以下取值：</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">Policy</th>
+<th style="text-align:center">Tests Performed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0 or LOW</td>
+<td style="text-align:center">Length</td>
+</tr>
+<tr>
+<td style="text-align:center">1 or MEDIUM</td>
+<td style="text-align:center">Length;numeric,lowercase/uppercase,and special characters</td>
+</tr>
+<tr>
+<td style="text-align:center">2 or STRONG</td>
+<td style="text-align:center">Length;numeric,lowercase/uppercase,and special characters; dictionary file</td>
+</tr>
+</tbody>
+</table>
+<p>操作：</p>
+<ul>
+<li>设置安全级别</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> global validate_password_policy=0;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置密码长度为8，可以设置为其他值，最小为4位</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> global validate_password_length=4;</span><br></pre></td></tr></table></figure>
+<p>之后就可以设置简单的密码了。</p>
+<h3 id="5-允许root远程登录"><a href="#5-允许root远程登录" class="headerlink" title="5.允许root远程登录"></a>5.允许root远程登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; GRANT ALL PRIVILEGES ON *.* TO <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED BY <span class="string">'[YOUR_PASSWORD]'</span> WITH GRANT OPTION;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
+<h3 id="6-修改字符集编码为UTF-8"><a href="#6-修改字符集编码为UTF-8" class="headerlink" title="6. 修改字符集编码为UTF-8"></a>6. 修改字符集编码为UTF-8</h3><ul>
+<li>查看当前字符编码</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show variables like <span class="string">"char%';</span></span><br></pre></td></tr></table></figure>
+<p>检测是否都是utf-8(filesystem除外)，如果不是就需要修改。 <strong>character_set_server</strong>一般是lantin1。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止mysqld服务</span></span><br><span class="line">systemctl stop mysqld</span><br><span class="line"><span class="comment"># 进入my.cnf文件，一般是/etc/路径下</span></span><br><span class="line">vim /etc/my.cnf</span><br><span class="line"><span class="comment"># 在[mysqld]下追加character-set-server=utf-8</span></span><br><span class="line"><span class="comment"># 在[mysql]下追加default-character-set=utf-8</span></span><br><span class="line"><span class="comment"># 启动mysqld</span></span><br><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://rovo98.github.io/2018/04/23/Centos7安装mysql5-7/" data-id="cji5zwcnc0007i8jvqq78nlzf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql5-7安装/">mysql5.7安装</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/06/07/ensp_路由连接实验/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用ensp进行简单的路由器互连实验
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机网络/">计算机网络</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql5-7安装/">mysql5.7安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/路由器连接，简单/">路由器连接，简单</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/mysql5-7安装/" style="font-size: 10px;">mysql5.7安装</a> <a href="/tags/路由器连接，简单/" style="font-size: 10px;">路由器连接，简单</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/06/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/07/ensp_路由连接实验/">使用ensp进行简单的路由器互连实验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/23/Centos7安装mysql5-7/">CentOS7通过yum(yellow dog update modifier) 安装mysql5.7</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 rovo98<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -15,21 +15,21 @@
 <meta property="og:site_name" content="rovo98&#39;s Blog -&gt; Leave your comfort zone!">
 <meta property="og:description" content="一次简单的测试">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/route-structure.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/pc1_setting.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/gateway1.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/pingTest.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/route1_info.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/route2_info.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/route3_info.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/tracert1.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/tracert2.png">
-<meta property="og:image" content="http://rovo98.github.io/ensp_路由连接实验/tracert3.png">
-<meta property="og:updated_time" content="2018-06-08T09:47:44.426Z">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/route-structure.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/pc1_setting.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/gateway1.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/pingTest.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/route1_info.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/route2_info.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/route3_info.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/tracert1.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/tracert2.png">
+<meta property="og:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/tracert3.png">
+<meta property="og:updated_time" content="2018-06-08T09:50:17.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ensp进行简单的路由器互连实验">
 <meta name="twitter:description" content="一次简单的测试">
-<meta name="twitter:image" content="http://rovo98.github.io/ensp_路由连接实验/route-structure.png">
+<meta name="twitter:image" content="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/route-structure.png">
   
     <link rel="alternate" href="/atom.xml" title="rovo98&#39;s Blog -&gt; Leave your comfort zone!" type="application/atom+xml">
   
@@ -113,7 +113,7 @@
 </ul>
 <p>备注：所有实验设备均由ensp模拟。</p>
 <h4 id="路由连接实验设计"><a href="#路由连接实验设计" class="headerlink" title="路由连接实验设计"></a>路由连接实验设计</h4><p>整体结构如下：</p>
-<p><img src="/ensp_路由连接实验/route-structure.png" alt="整体结构"></p>
+<p><img src="route-structure.png" alt="整体结构"></p>
 <ul>
 <li>1.其中分为六个不同的局域网；</li>
 </ul>
@@ -127,13 +127,13 @@
 <h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><h4 id="配置各个局域网的ip及其网关"><a href="#配置各个局域网的ip及其网关" class="headerlink" title="配置各个局域网的ip及其网关"></a>配置各个局域网的ip及其网关</h4><ul>
 <li>例如：192.168.11.0网段下的192.168.11.11主机：</li>
 </ul>
-<p><img src="/ensp_路由连接实验/pc1_setting.png" alt="PC1"></p>
+<p><img src="pc1_setting.png" alt="PC1"></p>
 <ul>
 <li>配置 192.168.11.1作为192.168.11.0网段的网关：</li>
 </ul>
-<p><img src="/ensp_路由连接实验/gateway1.png" alt="range1_gateway"></p>
+<p><img src="gateway1.png" alt="range1_gateway"></p>
 <p>所有主机经过配置后，他们应该可以ping通自己网段下的所有主机，如：192.168.11.12 ping 192.168.11.11</p>
-<p><img src="/ensp_路由连接实验/pingTest.png" alt="pingTest"></p>
+<p><img src="pingTest.png" alt="pingTest"></p>
 <ul>
 <li><strong>[需要注意的是]</strong>： 由于路由器互连时使用的是Serial串口，所以路由器之间配置的是serial串口的ip作为接口：</li>
 </ul>
@@ -150,34 +150,34 @@
 <ul>
 <li>AR6路由表：</li>
 </ul>
-<p><img src="/ensp_路由连接实验/route1_info.png" alt="route1_info"></p>
+<p><img src="route1_info.png" alt="route1_info"></p>
 <ul>
 <li>AR4路由表：</li>
 </ul>
-<p><img src="/ensp_路由连接实验/route2_info.png" alt="route2_info"></p>
+<p><img src="route2_info.png" alt="route2_info"></p>
 <ul>
 <li>AR7路由表：</li>
 </ul>
-<p><img src="/ensp_路由连接实验/route3_info.png" alt="route3_info"></p>
+<p><img src="route3_info.png" alt="route3_info"></p>
 <h3 id="测试实验结果"><a href="#测试实验结果" class="headerlink" title="测试实验结果"></a>测试实验结果</h3><p>使用任意一个局域网下的主机ping不同局域网下的主机：</p>
 <ul>
 <li>192.168.11.11 ping 192.168.13.12 和 192.168.12.12:</li>
 </ul>
-<p><img src="/ensp_路由连接实验/tracert1.png" alt="tracertTest1"></p>
+<p><img src="tracert1.png" alt="tracertTest1"></p>
 <ul>
 <li>192.168.12.11 ping 192.168.11.12 和 192.168.13.13:</li>
 </ul>
-<p><img src="/ensp_路由连接实验/tracert2.png" alt="tracertTest2"></p>
+<p><img src="tracert2.png" alt="tracertTest2"></p>
 <ul>
 <li>192.168.13.11 ping 192.168.11.11 和 192.168.12.11：</li>
 </ul>
-<p><img src="/ensp_路由连接实验/tracert3.png" alt="tracertTest3"></p>
+<p><img src="tracert3.png" alt="tracertTest3"></p>
 <p>由以上测试可以看出简单的路由器连接实验成功。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/" data-id="cji5saiqe0000s4jvdy8fowj2" class="article-share-link">Share</a>
+      <a data-url="http://rovo98.github.io/2018/06/07/ensp_路由连接实验/" data-id="cji5sh52100002cjvrov6o0op" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由器连接，简单/">路由器连接，简单</a></li></ul>

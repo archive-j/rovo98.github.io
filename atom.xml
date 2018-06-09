@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rovo98.github.io/"/>
-  <updated>2018-06-08T15:32:25.819Z</updated>
+  <updated>2018-06-09T03:29:26.417Z</updated>
   <id>http://rovo98.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文章加密测试</title>
+    <link href="http://rovo98.github.io/2018/06/09/%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%95/"/>
+    <id>http://rovo98.github.io/2018/06/09/文章加密测试/</id>
+    <published>2018-06-09T03:24:07.000Z</published>
+    <updated>2018-06-09T03:29:26.417Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h1 id="这是被加密的内容"><a href="#这是被加密的内容" class="headerlink" title="这是被加密的内容."></a>这是被加密的内容.</h1>]]></content>
+    
+    <summary type="html">
+    
+      文章加密测试。密码： password
+    
+    </summary>
+    
+      <category term="博客" scheme="http://rovo98.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="hexo" scheme="http://rovo98.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>使用ensp进行简单的路由器互连实验</title>

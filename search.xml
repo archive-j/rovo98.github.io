@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PPP 点对点通信验证]]></title>
+    <url>%2F2018%2F06%2F10%2Fppp%E9%80%9A%E4%BF%A1%E9%AA%8C%E8%AF%81%2F</url>
+    <content type="text"><![CDATA[使用Cisco Packet Tracer7 (思科网络模拟器)验证ppp点对点通信。 实验内容使用packet Tracer 模拟两台路由器，进行点对点通信测试。 实验设计实验设备结构图： 均使用思科模拟器中的Generic 泛型路由实验步骤 配置路由器由于只需要验证点对点通信，对路由器的配置，相对比较简单，路由器之间使用的是serial DCE 串口线相连。 配置Router1的serial 2/0串口为ip: 11.0.0.1 mask: 255.0.0.0,并配置时钟频率为64000 1234567Router&gt; enableRouter# configure terminalRouter(config) # hostname RARA (config) # interface serial 2/0RA (config) # no shutdownRA (config-if) # ip address 11.0.0.1 255.0.0.0RA (config-if) # clock rate 64000 配置Router2的serial 3/0 串口为ip: 11.0.0.2 mask： 255.0.0.0 123456Router&gt; enableRouter# configure terminalRouter(config) # hostname RBRB (config) # interface serial 3/0RB (config) # no shutdownRB (config-if) # ip address 11.0.0.2 255.0.0.0 查看两个路由的串口状态： RA: RB: 可以看到，路由器这里点对点通信默认使用的HDLC协议。 HDSL情况下验证ping：11.0.0.1 ping 11.0.0.2: 11.0.0.2 ping 11.0.0.1: ping 测试成功。 配置RA,RB使用ppp协议，再做ping测试： 先配置RA 使用 ppp协议： 123RA # configure terminalRA (config) # interface serial 2/0RA (config-if) # encapsulation ppp 可以看到RA当前使用的是ppp写协议，LCP处于Closed,此时，路由器应当无法进行点对点通信。 配置RB使用ppp协议： 123RB # configure terminalRB (config) # interface serial 3/0RB (config-if) # encapsulation ppp 这时，可以看到RB也是使用了ppp协议，且LCP也处于Open状态，路由器之间可以进行通信。 给ppp协议添加authentication鉴别 先配置RA，使其开启ppp chap (Challenge Handshake Authentication Protocol), 给RB 添加身份验证 1234RA # config terminalRA (config) # username RB password passwordRA (config) # interface serial 2/0RA (config-if) # ppp authentication chap 此时，虽然RA和RB都是使用ppp协议，但是RA给RB添加了身份认证，而RB则没有，此时LCP处于Closed状态，它们之间无法进行通信。 配置RB, 添加对RA的身份验证： 1234RB # config terminalRB (config) # username RA password passwordRB (config) # interface serial 2/0RB (config-if) # ppp authentication chap 可以看到此时，LCP已经打开，路由器之间可以进行点对点通信。 实验结果通过该实验，简单地验证了ppp协议在点对点信道中的使用。]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>ppp通信</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[文章加密测试]]></title>
     <url>%2F2018%2F06%2F09%2F%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"><![CDATA[这是被加密的内容.]]></content>

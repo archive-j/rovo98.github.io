@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rovo98.github.io/"/>
-  <updated>2018-06-12T07:37:06.147Z</updated>
+  <updated>2018-06-12T06:50:18.642Z</updated>
   <id>http://rovo98.github.io/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>jsp基础学习笔记 - 概览</title>
-    <link href="http://rovo98.github.io/posts/67d7cfb7/"/>
-    <id>http://rovo98.github.io/posts/67d7cfb7/</id>
-    <published>2018-06-12T03:40:34.000Z</published>
-    <updated>2018-06-12T07:37:06.147Z</updated>
-    
-    <content type="html"><![CDATA[<p>Java 服务器页面(jsp) 是用来开发动态页面的一项技术。</p><p><img src="/images/jsp基础学习-概览/JSP.png" alt=""></p><a id="more"></a><p>JSP 允许开发人员使用指定的 JSP 标签来向html页面中插入java源代码，标签通常是<strong>以 &lt;% 开头并以 %&gt;</strong> 结束。</p><h3 id="为什么使用-JSP？"><a href="#为什么使用-JSP？" class="headerlink" title="为什么使用 JSP？"></a>为什么使用 JSP？</h3><p>使用Java服务器页面(jsp)与使用实现 Common Gateway Interface(<a href="https://baike.baidu.com/item/CGI/607810" target="_blank" rel="noopener">CGI</a>)的程序目的是大致相同的。但对比CGI，jsp有以下优点：</p><ol><li>性能较好。因为JSP允许直接在html页面中嵌入动态元素，而不需要独立持有CGI文件；</li><li>JSP在服务器处理前都会进行预编译，不像 CGI/<a href="https://baike.baidu.com/item/perl" target="_blank" rel="noopener">Perl</a>, 每次页面被请求时，服务器都需要加在一个解释器(interperter) 以及目标脚本(target script);</li><li>JSP是基于 Java Servlets API 构建的，因此，和Servlets一样，JSP也可以使用这些强大的Enterprise Java API, ：<strong>JDBC, JNDI, EJB, JAXP, 等等</strong>；</li><li><strong>JSP 页面可以和处理业务逻辑的servlets结合使用</strong>，该模型由[java servlet 模板引擎提供支持。</li></ol><p>最后，JSP是JavaEE(企业级应用程序的完整平台)的一个组成部分。这意味着JSP可以在最简单的应用程序中扮演最复杂和最苛刻的角色。</p><h3 id="使用JSP的优势"><a href="#使用JSP的优势" class="headerlink" title="使用JSP的优势"></a>使用JSP的优势</h3><p>下面通过对比不同的技术来体现使用JSP的优点：</p><h4 id="vs-Active-Server-Pages-ASP"><a href="#vs-Active-Server-Pages-ASP" class="headerlink" title="vs. Active Server Pages (ASP)"></a>vs. Active Server Pages (ASP)</h4><p>对比<a href="https://baike.baidu.com/item/asp/128906" target="_blank" rel="noopener">ASP</a>, JSP有两大优点：第一是页面的动态部分是用java写的，而不是Visual Basic或其他MS特定的语言编写，所以它更强有力且易于使用；第二是它可以移植到其他的操作系统和非Microsoft的Web 服务器上，这使它更加健壮。</p><h4 id="vs-Pure-Servets（纯Servlets"><a href="#vs-Pure-Servets（纯Servlets" class="headerlink" title="vs. Pure Servets（纯Servlets)"></a>vs. Pure Servets（纯Servlets)</h4><p>使用JSP可以更容易编写和修改常规的html代码，而不是使用大量的 <strong>println</strong>语句来生成HTML。</p><h4 id="vs-Server-Side-Includes-SSI"><a href="#vs-Server-Side-Includes-SSI" class="headerlink" title="vs. Server-Side Includes (SSI)"></a>vs. Server-Side Includes (<a href="https://baike.baidu.com/item/SSI" target="_blank" rel="noopener">SSI</a>)</h4><p>SSI 实际上只适用于处理简单内容的程序，而不适用于使用表单数据，进行数据库连接等的程序。</p><h4 id="vs-Javascript"><a href="#vs-Javascript" class="headerlink" title="vs. Javascript"></a>vs. Javascript</h4><p>JavaScript 可以在客户端生成HTML，但很难和Web 服务器实现复杂任务的交互，例如：数据库访问以及图像处理等。</p><h4 id="vs-静态HTML"><a href="#vs-静态HTML" class="headerlink" title="vs. 静态HTML"></a>vs. 静态HTML</h4><p>常规的HTML不能包含动态的内容，无法动态地改变页面展示的数据。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Java 服务器页面(jsp) 是用来开发动态页面的一项技术。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/jsp基础学习-概览/JSP.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="jsp基础学习" scheme="http://rovo98.github.io/categories/jsp%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="jsp" scheme="http://rovo98.github.io/tags/jsp/"/>
-    
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
   
   <entry>
     <title>解决Github国内访问出现的问题</title>
@@ -156,6 +131,33 @@
   </entry>
   
   <entry>
+    <title>Java持久化框架基础学习笔记 - ORM</title>
+    <link href="http://rovo98.github.io/posts/4e7f2cb9/"/>
+    <id>http://rovo98.github.io/posts/4e7f2cb9/</id>
+    <published>2018-04-12T11:41:44.000Z</published>
+    <updated>2018-06-12T12:59:46.552Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>对象关系映射(Oject Relational Mapping, ORM)是一种程序技术，用户实现面向对象编程语言中不同类型系统的数据之间的转换。</p></blockquote><p><img src="/images/Java框架学习基础-ORM/orm.png" alt=""></p><a id="more"></a><p>为了更好的了解ORM，我们先要了解一下JDBC。</p><h3 id="什么是JDBC"><a href="#什么是JDBC" class="headerlink" title="什么是JDBC?"></a>什么是JDBC?</h3><p>JDBC，即<strong>Java Database Connectivity</strong>(Java数据库连接)。它为Java程序提供了访问关系型数据库(relational database)的Java API集合。<strong>这些API使得Java程序可以执行SQL语句并与任何符合SQL的数据库库进行交互。</strong></p><p>JDBC提供了一种<strong>灵活的</strong>结构来编写能够和数据库进行交互的应用，且在<strong>不做任何修改的情况下</strong>，能够运行于不同的平台。</p><h4 id="JDBC的优点和缺点"><a href="#JDBC的优点和缺点" class="headerlink" title="JDBC的优点和缺点"></a>JDBC的优点和缺点</h4><div class="table-container"><table><thead><tr><th style="text-align:center">优点</th><th style="text-align:center">缺点</th></tr></thead><tbody><tr><td style="text-align:center">清晰简单的SQL处理</td><td style="text-align:center">在大型的项目中使用时变得异常复杂</td></tr><tr><td style="text-align:center">处理大数据时有良好表现</td><td style="text-align:center">大量编程开销，没有封装</td></tr><tr><td style="text-align:center">非常适合小应用程序</td><td style="text-align:center">难以实现MVC模式</td></tr><tr><td style="text-align:center">语法简单易学</td><td style="text-align:center">查询是DBMS特有的</td></tr></tbody></table></div><h3 id="为什么使用对象关系映射-ORM"><a href="#为什么使用对象关系映射-ORM" class="headerlink" title="为什么使用对象关系映射(ORM)?"></a>为什么使用对象关系映射(ORM)?</h3><p>当我们使用面向对象系统时，对象模型和关系数据库存在不匹配的现象，<strong>RDMSs(关系型数据库) 以表格的形式表示数据，而面向对象编程语言，如java,C# 将数据表示为对象的属性，以及对象之间的关系</strong>。</p><p>例如下面的一个简单的实体类：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String firstName;</span><br><span class="line">    <span class="keyword">private</span> String lastName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> salary;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String fname, String lname, <span class="keyword">int</span> sal)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.firstName = fname;</span><br><span class="line">        <span class="keyword">this</span>.lastName = lname;</span><br><span class="line">        <span class="keyword">this</span>.salary = sal;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getFirstName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> firstName;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLastName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> lastName;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSalary</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> salary;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上面的对象在关系型数据库中可以这样存储和检索的：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> EMPLOYEE (</span><br><span class="line"><span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">not</span> <span class="literal">null</span> auto_increment,</span><br><span class="line">    first_name <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">default</span> <span class="literal">null</span>,</span><br><span class="line">    last_name <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">default</span> <span class="literal">null</span>,</span><br><span class="line">    salary <span class="built_in">int</span> <span class="keyword">default</span> <span class="literal">null</span>,</span><br><span class="line">    contraint PK_id primary <span class="keyword">key</span> (<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><h4 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h4><ol><li>可能我们开发了几个页面后，要修改数据库的设计，我们应该怎样处理？</li><li>将对象存储到关系型数据库和从数据库中读取存在以下五个<strong>不匹配(mismatch)</strong>的问题：</li></ol><div class="table-container"><table><thead><tr><th style="text-align:center">不匹配(Mismatch)</th><th style="text-align:center">描述(Description)</th></tr></thead><tbody><tr><td style="text-align:center">Granularity(粒度)</td><td style="text-align:center">有时你可能会有一个对象模型，它的类比数据库中的相应的表的数量还要多。</td></tr><tr><td style="text-align:center">Inheritence(继承)</td><td style="text-align:center">RDBMS不定义任何类似继承的东西，但这确是面向对象编程语言中的的自然范式。</td></tr><tr><td style="text-align:center">Identity(标识)</td><td style="text-align:center">RDBMS正好定义了一个“相等”的概念：主键。但是Java定义对象标识(a == b) 和对象相等(a.equals(b))。</td></tr><tr><td style="text-align:center">Associations(关联)</td><td style="text-align:center">面向对象编程语言使用对象引用来表示关联，而RDBMS将关联表示为外键。</td></tr><tr><td style="text-align:center">Navigation(检索)</td><td style="text-align:center">在Java和RDBMS中访问对象的方式根本不同。</td></tr></tbody></table></div><p><strong>对象关系映射（ORM）是处理上述所有不匹配问题的解决方案</strong>。</p><h3 id="什么是ORM"><a href="#什么是ORM" class="headerlink" title="什么是ORM?"></a>什么是ORM?</h3><p>ORM 是一项在关系型数据库和面向对象编程语言之间转换数据的编程技术。</p><p>相比于简单的JDBC，ORM有以下优点：</p><div class="table-container"><table><thead><tr><th style="text-align:center">No.</th><th style="text-align:center">Advantages</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">让业务逻辑代码访问数据对象，而不是数据表</td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">隐藏了业务逻辑的SQL查询的详细信息</td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">无需处理数据库实现问题</td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">基于业务概念而非数据库结构的实体</td></tr><tr><td style="text-align:center">5</td><td style="text-align:center">基于JDBC“底层”</td></tr><tr><td style="text-align:center">6</td><td style="text-align:center">事务管理和自动密钥生成</td></tr><tr><td style="text-align:center">7</td><td style="text-align:center">应用程序快速开发</td></tr></tbody></table></div><p>一个 ORM 解决方案由以下四个实体组成：</p><div class="table-container"><table><thead><tr><th style="text-align:center">No.</th><th style="text-align:center">Solutions</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">对持久化类的对象执行基本CRUD操作的API</td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">用于指定引用类和类的属性的查询的语言或API</td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">用于指定映射元数据的可配置工具</td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">一种与事务对象进行交互以执行脏检查，懒惰关联提取以及其他优化功能的技术。</td></tr></tbody></table></div><h3 id="Java-ORM-框架"><a href="#Java-ORM-框架" class="headerlink" title="Java ORM 框架"></a>Java ORM 框架</h3><p>有许多持久化框架ORM解决方案使用java实现的，如：</p><ul><li>Enterprise JavaBeans Entity Beans</li><li>Java Data Ojects</li><li>Castor</li><li>TopLink</li><li>Spring DAO</li><li>Hibernate</li><li>Mybatis</li><li>等等。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;对象关系映射(Oject Relational Mapping, ORM)是一种程序技术，用户实现面向对象编程语言中不同类型系统的数据之间的转换。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Java框架学习基础-ORM/orm.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java框架学习" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Java框架基础" scheme="http://rovo98.github.io/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="ORM" scheme="http://rovo98.github.io/tags/ORM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>基本查找算法 - basical searching algorithms</title>
     <link href="http://rovo98.github.io/posts/d83777d2/"/>
     <id>http://rovo98.github.io/posts/d83777d2/</id>
@@ -242,6 +244,31 @@
     
     
       <category term="sorting algs" scheme="http://rovo98.github.io/tags/sorting-algs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jsp基础学习笔记 - 概览</title>
+    <link href="http://rovo98.github.io/posts/67d7cfb7/"/>
+    <id>http://rovo98.github.io/posts/67d7cfb7/</id>
+    <published>2017-10-12T03:40:34.000Z</published>
+    <updated>2018-06-12T12:52:06.903Z</updated>
+    
+    <content type="html"><![CDATA[<p>Java 服务器页面(jsp) 是用来开发动态页面的一项技术。</p><p><img src="/images/jsp基础学习-概览/JSP.png" alt=""></p><a id="more"></a><p>JSP 允许开发人员使用指定的 JSP 标签来向html页面中插入java源代码，标签通常是<strong>以 &lt;% 开头并以 %&gt;</strong> 结束。</p><h3 id="为什么使用-JSP？"><a href="#为什么使用-JSP？" class="headerlink" title="为什么使用 JSP？"></a>为什么使用 JSP？</h3><p>使用Java服务器页面(jsp)与使用实现 Common Gateway Interface(<a href="https://baike.baidu.com/item/CGI/607810" target="_blank" rel="noopener">CGI</a>)的程序目的是大致相同的。但对比CGI，jsp有以下优点：</p><ol><li>性能较好。因为JSP允许直接在html页面中嵌入动态元素，而不需要独立持有CGI文件；</li><li>JSP在服务器处理前都会进行预编译，不像 CGI/<a href="https://baike.baidu.com/item/perl" target="_blank" rel="noopener">Perl</a>, 每次页面被请求时，服务器都需要加在一个解释器(interperter) 以及目标脚本(target script);</li><li>JSP是基于 Java Servlets API 构建的，因此，和Servlets一样，JSP也可以使用这些强大的Enterprise Java API, ：<strong>JDBC, JNDI, EJB, JAXP, 等等</strong>；</li><li><strong>JSP 页面可以和处理业务逻辑的servlets结合使用</strong>，该模型由[java servlet 模板引擎提供支持。</li></ol><p>最后，JSP是JavaEE(企业级应用程序的完整平台)的一个组成部分。这意味着JSP可以在最简单的应用程序中扮演最复杂和最苛刻的角色。</p><h3 id="使用JSP的优势"><a href="#使用JSP的优势" class="headerlink" title="使用JSP的优势"></a>使用JSP的优势</h3><p>下面通过对比不同的技术来体现使用JSP的优点：</p><h4 id="vs-Active-Server-Pages-ASP"><a href="#vs-Active-Server-Pages-ASP" class="headerlink" title="vs. Active Server Pages (ASP)"></a>vs. Active Server Pages (ASP)</h4><p>对比<a href="https://baike.baidu.com/item/asp/128906" target="_blank" rel="noopener">ASP</a>, JSP有两大优点：第一是页面的动态部分是用java写的，而不是Visual Basic或其他MS特定的语言编写，所以它更强有力且易于使用；第二是它可以移植到其他的操作系统和非Microsoft的Web 服务器上，这使它更加健壮。</p><h4 id="vs-Pure-Servets（纯Servlets"><a href="#vs-Pure-Servets（纯Servlets" class="headerlink" title="vs. Pure Servets（纯Servlets)"></a>vs. Pure Servets（纯Servlets)</h4><p>使用JSP可以更容易编写和修改常规的html代码，而不是使用大量的 <strong>println</strong>语句来生成HTML。</p><h4 id="vs-Server-Side-Includes-SSI"><a href="#vs-Server-Side-Includes-SSI" class="headerlink" title="vs. Server-Side Includes (SSI)"></a>vs. Server-Side Includes (<a href="https://baike.baidu.com/item/SSI" target="_blank" rel="noopener">SSI</a>)</h4><p>SSI 实际上只适用于处理简单内容的程序，而不适用于使用表单数据，进行数据库连接等的程序。</p><h4 id="vs-Javascript"><a href="#vs-Javascript" class="headerlink" title="vs. Javascript"></a>vs. Javascript</h4><p>JavaScript 可以在客户端生成HTML，但很难和Web 服务器实现复杂任务的交互，例如：数据库访问以及图像处理等。</p><h4 id="vs-静态HTML"><a href="#vs-静态HTML" class="headerlink" title="vs. 静态HTML"></a>vs. 静态HTML</h4><p>常规的HTML不能包含动态的内容，无法动态地改变页面展示的数据。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java 服务器页面(jsp) 是用来开发动态页面的一项技术。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/jsp基础学习-概览/JSP.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="jsp基础学习" scheme="http://rovo98.github.io/categories/jsp%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="jsp" scheme="http://rovo98.github.io/tags/jsp/"/>
+    
+      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

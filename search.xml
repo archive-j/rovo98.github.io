@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[jsp基础学习笔记 - 概览]]></title>
-    <url>%2Fposts%2F67d7cfb7%2F</url>
-    <content type="text"><![CDATA[Java 服务器页面(jsp) 是用来开发动态页面的一项技术。 JSP 允许开发人员使用指定的 JSP 标签来向html页面中插入java源代码，标签通常是以 &lt;% 开头并以 %&gt; 结束。 为什么使用 JSP？使用Java服务器页面(jsp)与使用实现 Common Gateway Interface(CGI)的程序目的是大致相同的。但对比CGI，jsp有以下优点： 性能较好。因为JSP允许直接在html页面中嵌入动态元素，而不需要独立持有CGI文件； JSP在服务器处理前都会进行预编译，不像 CGI/Perl, 每次页面被请求时，服务器都需要加在一个解释器(interperter) 以及目标脚本(target script); JSP是基于 Java Servlets API 构建的，因此，和Servlets一样，JSP也可以使用这些强大的Enterprise Java API, ：JDBC, JNDI, EJB, JAXP, 等等； JSP 页面可以和处理业务逻辑的servlets结合使用，该模型由[java servlet 模板引擎提供支持。 最后，JSP是JavaEE(企业级应用程序的完整平台)的一个组成部分。这意味着JSP可以在最简单的应用程序中扮演最复杂和最苛刻的角色。 使用JSP的优势下面通过对比不同的技术来体现使用JSP的优点： vs. Active Server Pages (ASP)对比ASP, JSP有两大优点：第一是页面的动态部分是用java写的，而不是Visual Basic或其他MS特定的语言编写，所以它更强有力且易于使用；第二是它可以移植到其他的操作系统和非Microsoft的Web 服务器上，这使它更加健壮。 vs. Pure Servets（纯Servlets)使用JSP可以更容易编写和修改常规的html代码，而不是使用大量的 println语句来生成HTML。 vs. Server-Side Includes (SSI)SSI 实际上只适用于处理简单内容的程序，而不适用于使用表单数据，进行数据库连接等的程序。 vs. JavascriptJavaScript 可以在客户端生成HTML，但很难和Web 服务器实现复杂任务的交互，例如：数据库访问以及图像处理等。 vs. 静态HTML常规的HTML不能包含动态的内容，无法动态地改变页面展示的数据。]]></content>
-      <categories>
-        <category>jsp基础学习</category>
-      </categories>
-      <tags>
-        <tag>jsp</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[解决Github国内访问出现的问题]]></title>
     <url>%2Fposts%2F7e3029b3%2F</url>
     <content type="text"><![CDATA[主要通过修改hosts文件解决Github在国内访问不了、访问慢和页面加载异常的问题(没钱买vpn~)。 简单了解一下github, github是目前全球最大的男性同性交友网站(~滑稽~), 使用示例如下： 开个玩笑，回归正题。 为什么访问不了以及访问速度会很慢？GitHub在中国大陆访问速度慢的问题原因有很多，但最直接和最主要的原因是GitHub的分发加速网络的域名遭到DNS污染。 由于GitHub的加速分发CDN域名assets-cdn.github.com遭到DNS污染，导致无法连接使用GitHub的加速分发服务器，才使得中国大陆访问速度很慢。 如何解决DNS污染？一般的DNS问题都可以通过修改Hosts文件来解决，GitHub的CDN域名被污染问题也不例外，同样可以通过修改Hosts文件解决。 将域名解析直接指向IP地址来绕过DNS的解析，以此解决污染问题。 获取被污染域名的实际IP地址访问ipaddress.com,使用ip lookup 工具获得相关域名的ip地址。 例如： github.com 可以看到，我查出的域名ip地址为： 192.30.254.112 和 192.30.253.113 (任取一个即可) 修改host文件，在文件中添加一行：[注] ： windows的hosts文件位置为： C:/windows/system32/drivers/etc/hosts 1192.30.253.112 github.com 刷新dns缓存打开命令行cmd,输入如下命令： 1ipconfig /flushdns 此时再刷新页面即可。此时可以正常访问github，但是访问速度还是很慢，我们接着做优化。 Github 访问提速在hosts文件中继续加入，如下代码： 12345678910111213141516171819# GitHub Start192.30.253.112 github.com192.30.253.119 gist.github.com151.101.228.133 assets-cdn.github.com151.101.228.133 raw.githubusercontent.com151.101.228.133 gist.githubusercontent.com151.101.228.133 cloud.githubusercontent.com151.101.228.133 camo.githubusercontent.com151.101.228.133 avatars0.githubusercontent.com151.101.228.133 avatars1.githubusercontent.com151.101.228.133 avatars2.githubusercontent.com151.101.228.133 avatars3.githubusercontent.com151.101.228.133 avatars4.githubusercontent.com151.101.228.133 avatars5.githubusercontent.com151.101.228.133 avatars6.githubusercontent.com151.101.228.133 avatars7.githubusercontent.com151.101.228.133 avatars8.githubusercontent.com192.30.253.116 api.github.com# GitHub End [notice] : 这里域名对应的ip是通过dns查询工具查询得到的，你应当选择的是延时相对较小且比较稳定的ip。 例如，上面的151.101.228.133是对我来说较好的ip: 推荐的dns查询检测工具： DNS查询 - 在线工具 DNS检测|DNS查询-站长工具 你可对单个域名多查询几次，以挑选稳定且速度较快的ip。 快速地访问github再次刷新dns缓存后，你已经可以快速地访问github了。 参考：https://github.com/chenxuhua/issues-blog/issues/3]]></content>
@@ -68,6 +56,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Java持久化框架基础学习笔记 - ORM]]></title>
+    <url>%2Fposts%2F4e7f2cb9%2F</url>
+    <content type="text"><![CDATA[对象关系映射(Oject Relational Mapping, ORM)是一种程序技术，用户实现面向对象编程语言中不同类型系统的数据之间的转换。 为了更好的了解ORM，我们先要了解一下JDBC。 什么是JDBC?JDBC，即Java Database Connectivity(Java数据库连接)。它为Java程序提供了访问关系型数据库(relational database)的Java API集合。这些API使得Java程序可以执行SQL语句并与任何符合SQL的数据库库进行交互。 JDBC提供了一种灵活的结构来编写能够和数据库进行交互的应用，且在不做任何修改的情况下，能够运行于不同的平台。 JDBC的优点和缺点 优点 缺点 清晰简单的SQL处理 在大型的项目中使用时变得异常复杂 处理大数据时有良好表现 大量编程开销，没有封装 非常适合小应用程序 难以实现MVC模式 语法简单易学 查询是DBMS特有的 为什么使用对象关系映射(ORM)?当我们使用面向对象系统时，对象模型和关系数据库存在不匹配的现象，RDMSs(关系型数据库) 以表格的形式表示数据，而面向对象编程语言，如java,C# 将数据表示为对象的属性，以及对象之间的关系。 例如下面的一个简单的实体类： 12345678910111213141516171819202122232425262728public class Employee &#123; private int id; private String firstName; private String lastName; private int salary; public Employee() &#123;&#125; public Employee(String fname, String lname, int sal) &#123; this.firstName = fname; this.lastName = lname; this.salary = sal; &#125; public int getId() &#123; return id; &#125; public String getFirstName() &#123; return firstName; &#125; public String getLastName() &#123; return lastName; &#125; public int getSalary() &#123; return salary; &#125;&#125; 上面的对象在关系型数据库中可以这样存储和检索的： 1234567create table EMPLOYEE ( id int not null auto_increment, first_name varchar(20) default null, last_name varchar(20) default null, salary int default null, contraint PK_id primary key (id)); 遇到的问题 可能我们开发了几个页面后，要修改数据库的设计，我们应该怎样处理？ 将对象存储到关系型数据库和从数据库中读取存在以下五个不匹配(mismatch)的问题： 不匹配(Mismatch) 描述(Description) Granularity(粒度) 有时你可能会有一个对象模型，它的类比数据库中的相应的表的数量还要多。 Inheritence(继承) RDBMS不定义任何类似继承的东西，但这确是面向对象编程语言中的的自然范式。 Identity(标识) RDBMS正好定义了一个“相等”的概念：主键。但是Java定义对象标识(a == b) 和对象相等(a.equals(b))。 Associations(关联) 面向对象编程语言使用对象引用来表示关联，而RDBMS将关联表示为外键。 Navigation(检索) 在Java和RDBMS中访问对象的方式根本不同。 对象关系映射（ORM）是处理上述所有不匹配问题的解决方案。 什么是ORM?ORM 是一项在关系型数据库和面向对象编程语言之间转换数据的编程技术。 相比于简单的JDBC，ORM有以下优点： No. Advantages 1 让业务逻辑代码访问数据对象，而不是数据表 2 隐藏了业务逻辑的SQL查询的详细信息 3 无需处理数据库实现问题 4 基于业务概念而非数据库结构的实体 5 基于JDBC“底层” 6 事务管理和自动密钥生成 7 应用程序快速开发 一个 ORM 解决方案由以下四个实体组成： No. Solutions 1 对持久化类的对象执行基本CRUD操作的API 2 用于指定引用类和类的属性的查询的语言或API 3 用于指定映射元数据的可配置工具 4 一种与事务对象进行交互以执行脏检查，懒惰关联提取以及其他优化功能的技术。 Java ORM 框架有许多持久化框架ORM解决方案使用java实现的，如： Enterprise JavaBeans Entity Beans Java Data Ojects Castor TopLink Spring DAO Hibernate Mybatis 等等。]]></content>
+      <categories>
+        <category>Java框架学习</category>
+      </categories>
+      <tags>
+        <tag>Java框架基础</tag>
+        <tag>ORM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基本查找算法 - basical searching algorithms]]></title>
     <url>%2Fposts%2Fd83777d2%2F</url>
     <content type="text"><![CDATA[引入基本查找算法，我们只谈静态查找的查找算法。 线性查找 - linear search特点： 从头开始遍历数组，一个一个和key比较，查找成功则返回索引值。 不要求数组是有序的。 时间复杂度为： $O(n)$. 线性查找原始抽象方法实现如下:1234567public static int linearSearch(Comparable[] a, Comparable key) &#123; for (int i = 0; i &lt; a.length; i++) &#123; if (a[i].compareTo(key) == 0) return i; &#125; return -1;&#125; 跳跃查找 - jump search特点： 要求查找数组有序； 主要思想是每次跳跃固定量的元素来确定目标元素所在的区间，再使用线性查找在区间上搜索目标元素。 时间复杂度为： $O(\sqrt{n})$. [notice] : 假设我们要在一个有n个元素的数组中搜索某个元素，最坏情况下（当目标元素为最后个元素时），这个算法要跳跃n/m步，在线性搜索时作m-1次比较。令 $f(n) = ((n/m) + m-1$.当m = $\sqrt{n}$时，f(n) 取最小值，所以通常情况下，**跳跃查找所使用的固定跳跃步数为 $\sqrt{n}$. 跳跃查找的原始抽象方法实现如下：1234567891011121314151617181920212223public static int jumpSearch(Comparable[] a, Comparable key) &#123; int n = a.length; int block_size = Math.floor(Math.sqrt(n)); int step = block_size; // 查找目标元素可能出现的区间 int prev = 0; while (a[Math.min(step, n) - 1].compareTo(key) &lt; 0) &#123; prev = step; step += block_size; if (prev &gt;= n) return -1; &#125; // 使用线性查找在确定的区间上查找目标元素 while (a[prev].compareTo(key) &lt; 0) &#123; prev++; if (prev == Math.min(step, n)) return -1; &#125; if (a[prev].compareTo(key) == 0) return prev; return -1;&#125; 二分查找 - binary search 要求数组有序。 将已经排好序的数组分为两个区间(interval), 把区间的中间元素与key比较, 若大于则搜索左区间，若小于则搜索右区间，等于则返回元素的索引。当区间长度为0时（key没出现在数组中),返回-1。 时间复杂度为 ： $O(nlogn)$. 二分查找原始抽象方法实现如下:12345678910111213141516171819202122232425262728// 非递归实现public static int binarySearch(Comparable[] a, Comparable key) &#123; int lo = 0; int hi = a.length - 1; while (lo &lt;= hi) &#123; int mid = lo + (hi - lo) / 2; if (a[mid].compareTo(key) == 0) return mid; else if (a[mid].compareTo(key) &gt; 0) hi = mid - 1; else lo = mid + 1; &#125; return -1;&#125;// 递归实现public static int binarySearchRecursion(Comparable[] a, Comparable key, int lo, int hi) &#123; if (lo &lt;= hi) &#123; int mid = lo + (hi - lo) / 2; if (a[mid].compareTo(key) == 0) return mid; else if (a[mid].compareTo(key) &lt; 0) return binarySearchRecursion(a, key, mid+1, hi); else return binarySearchRecursion(a, key, lo, mid-1); &#125; return -1;&#125; 三分查找 - ternary search特点： 三分查找是二分查找的扩展； 时间复杂度为 ： $O(nlog_3n)$. [notice]: 虽然看似三分查找的时间复杂度比二分查找的时间复杂度小，但是在最坏情况下，二分查找需要$2Log_2n + 1$次比较，而三分查找需要$4Log_{3}n + 1$次比较 三分查找原始抽象方法实现如下：特点： 类似二分查找，将查找数组划分为三个部分来进行查找； 时间复杂度： $Log_3n$. 12345678910111213141516171819202122// 递归实现.public static int ternarySearch(Comparable[] a, Comparable key, int lo, int hi) &#123; if (lo &lt;= hi) &#123; int mid1 = lo + (hi - lo) / 3; int mid2 = mid1 + (hi - lo) / 3; if (a[mid1].compareTo(key) == 0) return mid1; if (a[mid2].compareTo(key) == 0) return mid2; // 目标元素只可能出现在第一部分. if (a[mid1].compareTo(key) &gt; 0) return ternarySearch(a, key, lo, mid1-1); // 目标元素只可能出现在第三部分. if (a[mid2].compareTo(key) &lt; 0) return ternarySearch(a, key, mid2+1, hi); // 目标元素只可能出现在第二部分. return ternarySearch(a, key, mid1+1, mid2-1); &#125; // 查找失败. return -1;&#125; 指数搜索 - exponential search特点： 找到目标元素可能出现的区间； 使用二分查找在区间上查找目标元素; 时间复杂度： $logn$; [notice]: 适用于目标数组元素大小趋向于无限大的情况； 当目标出现在目标数组左边时，指数搜索速度比二分查找快。 12345678public static int exponentialSearch(Comparable[] a, Comparable key) &#123; int n = a.length; int i = 1; while (i &lt; n &amp;&amp; a[i].compareTo(key) &lt; 0) &#123; i = i * 2; &#125; return binarySearch(a, key, i/2, Math.min(i, n-1));&#125; 插值搜索 - interpolation search特点： 原理： 假设查找数组的元素是均匀分布的，使用直线插值搜索，不像二分查找那样每次都是搜索区间中间元素。它能够快速的接近目标元素。 当元素均匀分布的情况，时间复杂度为: $O(log(log n))$, 最坏情况: $O(n)$. 12345678910111213141516// java program to implement interpolatoin search.public static int interpolationSearch(Comparable[] a, Comparable key) &#123; int lo = 0; int hi = a.length - 1; while (lo &lt;= hi &amp;&amp; less(key, a[hi]) &amp;&amp; less(a[lo], key)) &#123; int pos = lo + (hi - lo) * (key - a[lo]) / (a[hi] - a[lo]); if (a[pos].compareTo(key) == 0) return pos; else if (a[pos].compareTo(key) &gt; 0) hi = pos - 1; else lo = pos + 1; &#125; return -1;&#125; NOTICE本文中，涉及的算法详细实现和使用，请移步到github查看。]]></content>
@@ -109,6 +109,18 @@
       </categories>
       <tags>
         <tag>sorting algs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jsp基础学习笔记 - 概览]]></title>
+    <url>%2Fposts%2F67d7cfb7%2F</url>
+    <content type="text"><![CDATA[Java 服务器页面(jsp) 是用来开发动态页面的一项技术。 JSP 允许开发人员使用指定的 JSP 标签来向html页面中插入java源代码，标签通常是以 &lt;% 开头并以 %&gt; 结束。 为什么使用 JSP？使用Java服务器页面(jsp)与使用实现 Common Gateway Interface(CGI)的程序目的是大致相同的。但对比CGI，jsp有以下优点： 性能较好。因为JSP允许直接在html页面中嵌入动态元素，而不需要独立持有CGI文件； JSP在服务器处理前都会进行预编译，不像 CGI/Perl, 每次页面被请求时，服务器都需要加在一个解释器(interperter) 以及目标脚本(target script); JSP是基于 Java Servlets API 构建的，因此，和Servlets一样，JSP也可以使用这些强大的Enterprise Java API, ：JDBC, JNDI, EJB, JAXP, 等等； JSP 页面可以和处理业务逻辑的servlets结合使用，该模型由[java servlet 模板引擎提供支持。 最后，JSP是JavaEE(企业级应用程序的完整平台)的一个组成部分。这意味着JSP可以在最简单的应用程序中扮演最复杂和最苛刻的角色。 使用JSP的优势下面通过对比不同的技术来体现使用JSP的优点： vs. Active Server Pages (ASP)对比ASP, JSP有两大优点：第一是页面的动态部分是用java写的，而不是Visual Basic或其他MS特定的语言编写，所以它更强有力且易于使用；第二是它可以移植到其他的操作系统和非Microsoft的Web 服务器上，这使它更加健壮。 vs. Pure Servets（纯Servlets)使用JSP可以更容易编写和修改常规的html代码，而不是使用大量的 println语句来生成HTML。 vs. Server-Side Includes (SSI)SSI 实际上只适用于处理简单内容的程序，而不适用于使用表单数据，进行数据库连接等的程序。 vs. JavascriptJavaScript 可以在客户端生成HTML，但很难和Web 服务器实现复杂任务的交互，例如：数据库访问以及图像处理等。 vs. 静态HTML常规的HTML不能包含动态的内容，无法动态地改变页面展示的数据。]]></content>
+      <categories>
+        <category>jsp基础学习</category>
+      </categories>
+      <tags>
+        <tag>jsp</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>

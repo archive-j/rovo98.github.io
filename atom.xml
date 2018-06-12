@@ -246,6 +246,28 @@
   </entry>
   
   <entry>
+    <title>理解Requests库的异常和HTTP协议</title>
+    <link href="http://rovo98.github.io/posts/4ae864e2/"/>
+    <id>http://rovo98.github.io/posts/4ae864e2/</id>
+    <published>2017-03-15T05:11:01.000Z</published>
+    <updated>2018-06-12T07:56:13.156Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单理解Requests库中的异常和HTTP协议。</p><a id="more"></a><div class="table-container"><table><thead><tr><th style="text-align:center">异常</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center">requests.ConnectionError</td><td style="text-align:center">网络连接错误异常，如DNS查询失败、拒绝连接等</td></tr><tr><td style="text-align:center">requests.HTTPError</td><td style="text-align:center">HTTP错误异常</td></tr><tr><td style="text-align:center">requests.URLRequired</td><td style="text-align:center">URl缺失异常</td></tr><tr><td style="text-align:center">requests.TooManyRedirects</td><td style="text-align:center">超过最大重定向次数，产生重定向异常</td></tr><tr><td style="text-align:center">requests.ConnectTimeout</td><td style="text-align:center">连接远程服务器超时异常</td></tr><tr><td style="text-align:center">requests.Timeout</td><td style="text-align:center">请求URL超时，产生超时异常</td></tr></tbody></table></div><p>Response的异常：</p><div class="table-container"><table><thead><tr><th style="text-align:center">异常</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center">r.raise_for_status()</td><td style="text-align:center">如果不是200， 产生异常requests.HTTPError</td></tr></tbody></table></div><p><strong>爬取网页的通用代码框架</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHTMLText</span><span class="params">(url)</span> :</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(url, timeout=<span class="number">30</span>)</span><br><span class="line">        r.raise_for_status() <span class="comment">#如果状态不是200， 引发requests.HTTPError异常</span></span><br><span class="line">        r.encoding = r.apparent_encoding <span class="comment">#将encoding 设置为'utf-8'，一般用于没有charset的header</span></span><br><span class="line">        <span class="keyword">return</span> r.text</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'产生异常'</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    url = <span class="string">"http://www.baidu.com"</span></span><br><span class="line">    print(getHTMLText(url))</span><br></pre></td></tr></table></figure><h4 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h4><p>HTTP, Hypertext Transfer Protocol, 超文本传输协议</p><p>HTTP是一个基于“请求与响应”模式的、无状态的应用层协议。</p><p>HTTP协议采用URL作为定位网络资源的标识。</p><p><strong>URL格式：</strong><a href="http://host\[:port][path" target="_blank" rel="noopener">http://host\[:port][path</a>]</p><p>HTTP URL的理解：</p><p>URL 是通过HTTP协议存取资源的Internet路径，一个URL对应一个数据资源。</p><h4 id="HTTP协议对资源的操作"><a href="#HTTP协议对资源的操作" class="headerlink" title="HTTP协议对资源的操作"></a>HTTP协议对资源的操作</h4><div class="table-container"><table><thead><tr><th style="text-align:center">方法</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center">GET</td><td style="text-align:center">请求获取URL位置的资源</td></tr><tr><td style="text-align:center">HEAD</td><td style="text-align:center">请求获取URL位置资源的响应消息报告，即获取该资源的头部信息</td></tr><tr><td style="text-align:center">POST</td><td style="text-align:center">请求URL位置的资源后附加新的数据</td></tr><tr><td style="text-align:center">PUT</td><td style="text-align:center">请求向URL位置存储一个资源，覆盖原URL位置的资源</td></tr><tr><td style="text-align:center">PATCH</td><td style="text-align:center">请求局部更新URL位置的资源，即改变该处资源的部分内容</td></tr><tr><td style="text-align:center">DELETE</td><td style="text-align:center">请求删除URL位置存储的资源</td></tr></tbody></table></div><p><strong>理解PATCH和PUT的区别</strong>：</p><p>假设URL位置有一组数据UserInfo， 包括UserID、UserName等20个字段</p><p> 需求：用户修改了UserName，其他不变。</p><p>*采用PATCH，仅向URL提交UserName的剧本更新请求。</p><p>*采用PUT，必须将所有20个字段一并提交URL，未提交字段被删除。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简单理解Requests库中的异常和HTTP协议。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python爬虫" scheme="http://rovo98.github.io/categories/python%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="Requests库" scheme="http://rovo98.github.io/tags/Requests%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Requests库的7个主要方法</title>
     <link href="http://rovo98.github.io/posts/c671c604/"/>
     <id>http://rovo98.github.io/posts/c671c604/</id>

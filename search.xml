@@ -65,6 +65,7 @@
       <tags>
         <tag>Java框架基础</tag>
         <tag>ORM</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -119,8 +120,8 @@
         <category>jsp基础学习</category>
       </categories>
       <tags>
-        <tag>jsp</tag>
         <tag>学习笔记</tag>
+        <tag>jsp</tag>
       </tags>
   </entry>
   <entry>
@@ -131,6 +132,7 @@
         <category>python爬虫</category>
       </categories>
       <tags>
+        <tag>学习笔记</tag>
         <tag>Requests库</tag>
       </tags>
   </entry>
@@ -142,6 +144,7 @@
         <category>python爬虫</category>
       </categories>
       <tags>
+        <tag>学习笔记</tag>
         <tag>Requests库</tag>
       </tags>
   </entry>

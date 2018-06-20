@@ -183,7 +183,7 @@
     <link href="http://rovo98.github.io/posts/4fe73428/"/>
     <id>http://rovo98.github.io/posts/4fe73428/</id>
     <published>2018-04-11T06:00:01.000Z</published>
-    <updated>2018-06-14T10:02:05.493Z</updated>
+    <updated>2018-06-20T10:35:59.664Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>从高层面来看， Struts 2 是一个纯粹的 MVC (或MVC2)框架，Struts 2使用以下的五个核心部分来实现 Model-View-Controller(MVC) 模式：</p><ul><li>Actions</li><li>Interceptors</li><li>Value Stack / OGNL</li><li>Results / Result types</li><li>View technologies</li></ul></blockquote><a id="more"></a><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>相比于传统的 <code>MVC</code> 框架， <code>Struts 2</code> 略有不同， 这是因为<code>Struts 2</code>中的 <code>action</code>更多的是扮演<code>model</code>的角色， 而不是 <code>controller</code>,虽然这其中有一些重叠的地方。</p><p><img src="struts_2_architecture.gif" alt=""></p><p>上面的图描述了<code>Struts 2</code>架构中的<code>Model</code>, <code>View</code>和<code>Controller</code>。<code>controller</code>由<code>Struts 2</code>的<code>dispatch servlet filter</code>(Servlet分发过滤器) 和 <code>interceptors</code>(拦截器)，<code>actions</code>实现<code>Model</code>, 视图<code>view</code>由<code>result types 和 results</code> 实现。值栈(<code>Value Stack</code>)和 <code>OGNL</code> 提供通用线程，链接和启用其他组件之间的集成。</p><p>除了上述的组件外， 还有大量的关于配置的消息(<strong>information</strong>)， 对Web 应用程序的配置， 对<code>actions</code>的配置，以及<code>interceptors,results</code>等等的配置。</p><h3 id="Request-生命周期"><a href="#Request-生命周期" class="headerlink" title="Request 生命周期"></a>Request 生命周期</h3><p>基于上面的图，我们可以了解到在Struts 2工作流中的用户请求的生命周期是这样的：</p><ol><li>用户向服务器发送一个资源(例如: 页面)请求；</li><li>Struts 2 的 Dispatcher Filter 拦截请求，并选择合适Action；</li><li>执行已配置的<code>interceptors</code>(拦截器)的功能， 例如： 表单验证，文件上传等；</li><li>基于请求操作，调用并执行已选择的<code>action</code>；</li><li>同样，如果需要，配置的拦截器可用于进行任意的后期处理；</li><li>最后，将由<code>view</code>准备的结果(result)返回给用户。</li></ol>]]></content>
     
@@ -200,7 +200,7 @@
     
       <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="struts 2" scheme="http://rovo98.github.io/tags/struts-2/"/>
+      <category term="Struts 2" scheme="http://rovo98.github.io/tags/Struts-2/"/>
     
   </entry>
   

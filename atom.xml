@@ -61,28 +61,6 @@
   </entry>
   
   <entry>
-    <title>文章加密测试</title>
-    <link href="http://rovo98.github.io/posts/26ea2038/"/>
-    <id>http://rovo98.github.io/posts/26ea2038/</id>
-    <published>2018-06-09T03:24:07.000Z</published>
-    <updated>2018-06-12T06:50:18.628Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h1 id="这是被加密的内容"><a href="#这是被加密的内容" class="headerlink" title="这是被加密的内容."></a>这是被加密的内容.</h1>]]></content>
-    
-    <summary type="html">
-    
-      文章加密测试。密码： password
-    
-    </summary>
-    
-      <category term="博客" scheme="http://rovo98.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="hexo" scheme="http://rovo98.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>使用ensp进行简单的路由器互连实验</title>
     <link href="http://rovo98.github.io/posts/cc46ce96/"/>
     <id>http://rovo98.github.io/posts/cc46ce96/</id>

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[爬取校内腾讯企业邮箱通信录]]></title>
+    <url>%2Fposts%2Fe675b5d9%2F</url>
+    <content type="text"><![CDATA[简单使用python request + re 爬取校内邮箱通信录(腾讯企业邮箱)的用户信息数据。一、分析需要爬取的数据通过手动打开浏览器，正常访问网站，判断需要爬取的数据是静态还是动态数据，制定不同的爬取方案。1. 静态/动态 数据类型判断登陆企业校内邮箱，可以看到需要获取的内容主要呈现在该页面:F12打开控制台，查看Elements，可以很容易发现，用户数据在目录节点没有展开的情况下，html文档中并不会包含我们需要的数据，当点击展开目录节点后，才能获取到数据。因此，可以判断，我们需要爬取的数据是动态生成的，可以初步认为是通过AJAX异步请求来从服务器端获取数据的。2. 数据定位我们已经知道了需要爬取的数据是动态生成的，这时，同样F12打开控制台，到Network栏目下，查找类型为XHR(AJAX的请求链接)的请求链接，并按数据文件大小从到小排序，再次刷新页面，点击通讯录栏目，展开到具体的用户项，依次点击XHR以确定需要的数据是通过哪个链接获取的：可以看到，请求链接格式为:https://exmail.qq.com/cgi-bin/laddr_biz?t=memtree&amp;limit={limit}&amp;partyid={pid}&amp;action=show_party&amp;sid={sid},参数有 -ArgumentDescriptiont取值不变,memtree，具体含义就不管了limit链接中取值:500,单次获取用户的最大数量，我们可以自己修改，再次发起请求来验证partyid变化值，为所属组的id,例如：学生 -&gt; 专业 -&gt; 院系学生所属专业partyid就是的专业的id,etc.action在此链接中不变，取值:show_partysid用户登陆后生成的sid值，访问过程中不变通过上面的分析，我们可以知道，要获取所有学生的信息，主要是在获取所有的专业的id后，依次作为上面链接的partyid来发起请求即可。尝试在html Elements文档中搜索，能够搜到相应的数据，但它也是动态生成的 -继续在Network中将过滤类型设置为doc同时按文件大小排序，查找包含oPartyList的文件 -到此，我们所有的分析任务已经结束了，接下来只需要编写相应的爬虫程序即可。二、爬虫程序设计这里只是编写一个简单的爬虫程序，不使用IP代理，爬虫发起请求所需的sid通过用户自己登陆后手动获取，相应的cookie也是如此。1. 获取所有专业的id上面分析提到的，要获取用户数据，主要是要先获取到用户所在的组idpartyid。123456789101112131415161718192021def getAllPID(): """ 获取所有的专业id,作为用户的pid. """ sid = 'xxx' # 用户登陆后的sid all_parties_url = 'https://exmail.qq.com/cgi-bin/laddr_biz?action=show_party_list&amp;sid=&#123;sid&#125;&amp;t=contact&amp;view=biz'.format(sid=sid) cookies = dict(...) # cookie参数和值 request = request.get(all_parties_url,cookies=cookies) regexp = r'&#123;id:"(\S*?)", pid:"(\S*?)", name:"(\S*?)", order:"(\S*?)"&#125;' results = re.findall(regexp,text) all_parties_ids = [] # 所有pid all_parties_info = dict() # 所有组信息 root_party = None # 根通信组 for p in results: all_parties_id.append(p[0]) party = dict(id=item[0], pid=item[1], name=item[2], order=item[3]) all_parties_info[item[0]] = party if p[1] == 0 or p[1] == '0': root_party = party2. 获取学生信息数据依次遍历pid列表，构造不同的pid不同的链接，来获取全部的通讯录内容。1234567891011121314151617181920212223def getAllUserInfo(): ... 获取所有通讯录用户信息 ... all_user_info = [] # 用于保存所有用户数据信息 # 获取用户数据的链接 party_user_url = 'https://exmail.qq.com/cgi-bin/laddr_biz?t=memtree&amp;limit=&#123;limit&#125;'\ '&amp;partyid=&#123;pid&#125;&amp;action=show_party&amp;sid=&#123;sid&#125;' regexp = r'&#123;uin:"(\S*?)", pid:"(\S*?)", alias:"(\S*?)", sex:"(\S*?), pos:"(\S*?)", tel:"(\S*?)",'\ ' birth:"(\S*?)(\S*?)(\S*?)(\S*?)", slave_alias:"(\S*?)(\S*?)(\S*?)", department:"(\S*?)(\S*?)", mobile:"(\S*?)"&#125;' for pid in all_parites_ids: # 依次构造不同pid的请求链接 url = party_user_url.format(limit=limit, pid=pid, sid=sid) request = requests.get(url, cookies=cookies) text = request.text results = re.findall(regexp, text) for item in results: user = dict(uin=item[0], pid=item[1], name=item[2], alias=item[3], sex=item[4], pos=item[5], tel=item[6],birth=item[7], slave_alias=item[8], department=item[9], mobile=item[10]) all_user_info.append(user)完整的程序，请移步到查看Github三、爬取结果]]></content>
+      <categories>
+        <category>Python</category>
+        <category>python爬虫</category>
+      </categories>
+      <tags>
+        <tag>Spider demo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[解决Github国内访问出现的问题]]></title>
     <url>%2Fposts%2F7e3029b3%2F</url>
     <content type="text"><![CDATA[主要通过修改hosts文件解决Github在国内访问不了、访问慢和页面加载异常的问题(没钱买vpn~)。简单了解一下github, github是目前全球最大的男性同性交友网站(~滑稽~), 使用示例如下：开个玩笑，回归正题。为什么访问不了以及访问速度会很慢？GitHub在中国大陆访问速度慢的问题原因有很多，但最直接和最主要的原因是GitHub的分发加速网络的域名遭到DNS污染。由于GitHub的加速分发CDN域名assets-cdn.github.com遭到DNS污染，导致无法连接使用GitHub的加速分发服务器，才使得中国大陆访问速度很慢。如何解决DNS污染？一般的DNS问题都可以通过修改Hosts文件来解决，GitHub的CDN域名被污染问题也不例外，同样可以通过修改Hosts文件解决。将域名解析直接指向IP地址来绕过DNS的解析，以此解决污染问题。获取被污染域名的实际IP地址访问ipaddress.com,使用ip lookup 工具获得相关域名的ip地址。例如： github.com可以看到，我查出的域名ip地址为： 192.30.254.112 和 192.30.253.113 (任取一个即可)修改host文件，在文件中添加一行：[注] ： windows的hosts文件位置为：C:/windows/system32/drivers/etc/hosts1192.30.253.112 github.com刷新dns缓存打开命令行cmd,输入如下命令：1ipconfig /flushdns此时再刷新页面即可。此时可以正常访问github，但是访问速度还是很慢，我们接着做优化。Github 访问提速在hosts文件中继续加入，如下代码：12345678910111213141516171819# GitHub Start192.30.253.112 github.com192.30.253.119 gist.github.com151.101.228.133 assets-cdn.github.com151.101.228.133 raw.githubusercontent.com151.101.228.133 gist.githubusercontent.com151.101.228.133 cloud.githubusercontent.com151.101.228.133 camo.githubusercontent.com151.101.228.133 avatars0.githubusercontent.com151.101.228.133 avatars1.githubusercontent.com151.101.228.133 avatars2.githubusercontent.com151.101.228.133 avatars3.githubusercontent.com151.101.228.133 avatars4.githubusercontent.com151.101.228.133 avatars5.githubusercontent.com151.101.228.133 avatars6.githubusercontent.com151.101.228.133 avatars7.githubusercontent.com151.101.228.133 avatars8.githubusercontent.com192.30.253.116 api.github.com# GitHub End[notice] : 这里域名对应的ip是通过dns查询工具查询得到的，你应当选择的是延时相对较小且比较稳定的ip。例如，上面的151.101.228.133是对我来说较好的ip:推荐的dns查询检测工具：DNS查询 - 在线工具DNS检测|DNS查询-站长工具你可对单个域名多查询几次，以挑选稳定且速度较快的ip。快速地访问github再次刷新dns缓存后，你已经可以快速地访问github了。参考：https://github.com/chenxuhua/issues-blog/issues/3]]></content>
@@ -54,8 +66,8 @@
       </categories>
       <tags>
         <tag>Java框架基础</tag>
-        <tag>学习笔记</tag>
         <tag>hibernate</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -67,8 +79,8 @@
       </categories>
       <tags>
         <tag>Java框架基础</tag>
-        <tag>ORM</tag>
         <tag>学习笔记</tag>
+        <tag>ORM</tag>
       </tags>
   </entry>
   <entry>

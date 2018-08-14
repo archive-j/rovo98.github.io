@@ -4,9 +4,9 @@ Allow: /archives/
 Allow: /categories/
 Allow: /tags/ 
 Allow: /post/
+Allow: /about/
 Disallow: /lib/
 Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 Disallow: /live2dw/
-Disallow: /fancybox/

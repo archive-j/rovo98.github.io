@@ -5,9 +5,9 @@
   <subtitle>Leave your comfort zone!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://rovo98.github.io/"/>
+  <link href="http://rovo98.coding.me/"/>
   <updated>2018-07-31T09:33:38.122Z</updated>
-  <id>http://rovo98.github.io/</id>
+  <id>http://rovo98.coding.me/</id>
   
   <author>
     <name>rovo98</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>爬取校内腾讯企业邮箱通信录</title>
-    <link href="http://rovo98.github.io/posts/e675b5d9/"/>
-    <id>http://rovo98.github.io/posts/e675b5d9/</id>
+    <link href="http://rovo98.coding.me/posts/e675b5d9/"/>
+    <id>http://rovo98.coding.me/posts/e675b5d9/</id>
     <published>2018-07-25T06:07:00.000Z</published>
     <updated>2018-07-31T09:33:38.122Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="Python" scheme="http://rovo98.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://rovo98.coding.me/categories/Python/"/>
     
-      <category term="python爬虫" scheme="http://rovo98.github.io/categories/Python/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://rovo98.coding.me/categories/Python/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="Spider demo" scheme="http://rovo98.github.io/tags/Spider-demo/"/>
+      <category term="Spider demo" scheme="http://rovo98.coding.me/tags/Spider-demo/"/>
     
   </entry>
   
   <entry>
     <title>解决Github国内访问出现的问题</title>
-    <link href="http://rovo98.github.io/posts/7e3029b3/"/>
-    <id>http://rovo98.github.io/posts/7e3029b3/</id>
+    <link href="http://rovo98.coding.me/posts/7e3029b3/"/>
+    <id>http://rovo98.coding.me/posts/7e3029b3/</id>
     <published>2018-06-10T07:58:34.000Z</published>
     <updated>2018-07-30T16:13:18.757Z</updated>
     
@@ -55,17 +55,17 @@
     
     </summary>
     
-      <category term="tips" scheme="http://rovo98.github.io/categories/tips/"/>
+      <category term="tips" scheme="http://rovo98.coding.me/categories/tips/"/>
     
     
-      <category term="github" scheme="http://rovo98.github.io/tags/github/"/>
+      <category term="github" scheme="http://rovo98.coding.me/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>PPP 点对点通信验证</title>
-    <link href="http://rovo98.github.io/posts/28ff89ad/"/>
-    <id>http://rovo98.github.io/posts/28ff89ad/</id>
+    <link href="http://rovo98.coding.me/posts/28ff89ad/"/>
+    <id>http://rovo98.coding.me/posts/28ff89ad/</id>
     <published>2018-06-09T16:10:00.000Z</published>
     <updated>2018-08-01T08:35:23.116Z</updated>
     
@@ -77,17 +77,17 @@
     
     </summary>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="ppp通信" scheme="http://rovo98.github.io/tags/ppp%E9%80%9A%E4%BF%A1/"/>
+      <category term="ppp通信" scheme="http://rovo98.coding.me/tags/ppp%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
   <entry>
     <title>使用ensp进行简单的路由器互连实验</title>
-    <link href="http://rovo98.github.io/posts/cc46ce96/"/>
-    <id>http://rovo98.github.io/posts/cc46ce96/</id>
+    <link href="http://rovo98.coding.me/posts/cc46ce96/"/>
+    <id>http://rovo98.coding.me/posts/cc46ce96/</id>
     <published>2018-06-06T16:00:00.000Z</published>
     <updated>2018-08-01T08:32:20.689Z</updated>
     
@@ -99,17 +99,17 @@
     
     </summary>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="路由器" scheme="http://rovo98.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+      <category term="路由器" scheme="http://rovo98.coding.me/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>Computer Network | 计算机网络</title>
-    <link href="http://rovo98.github.io/posts/7fc520f1/"/>
-    <id>http://rovo98.github.io/posts/7fc520f1/</id>
+    <link href="http://rovo98.coding.me/posts/7fc520f1/"/>
+    <id>http://rovo98.coding.me/posts/7fc520f1/</id>
     <published>2018-05-20T04:00:00.000Z</published>
     <updated>2018-08-06T13:16:25.546Z</updated>
     
@@ -121,21 +121,21 @@
     
     </summary>
     
-      <category term="GeeksforGeeks" scheme="http://rovo98.github.io/categories/GeeksforGeeks/"/>
+      <category term="GeeksforGeeks" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/"/>
     
-      <category term="Computer Network" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/"/>
+      <category term="Computer Network" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>计算机网络中的传输模式 | Transmission in Computer Network</title>
-    <link href="http://rovo98.github.io/posts/2ccb698e/"/>
-    <id>http://rovo98.github.io/posts/2ccb698e/</id>
+    <link href="http://rovo98.coding.me/posts/2ccb698e/"/>
+    <id>http://rovo98.coding.me/posts/2ccb698e/</id>
     <published>2018-05-19T16:00:05.000Z</published>
     <updated>2018-08-06T13:13:54.518Z</updated>
     
@@ -147,23 +147,23 @@
     
     </summary>
     
-      <category term="GeeksforGeeks" scheme="http://rovo98.github.io/categories/GeeksforGeeks/"/>
+      <category term="GeeksforGeeks" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/"/>
     
-      <category term="Computer Network" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/"/>
+      <category term="Computer Network" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/"/>
     
-      <category term="Basics" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/Basics/"/>
+      <category term="Basics" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/Basics/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>计算机网络中的链路配置 | Line configuration in computer network</title>
-    <link href="http://rovo98.github.io/posts/0/"/>
-    <id>http://rovo98.github.io/posts/0/</id>
+    <link href="http://rovo98.coding.me/posts/0/"/>
+    <id>http://rovo98.coding.me/posts/0/</id>
     <published>2018-05-19T16:00:04.000Z</published>
     <updated>2018-08-01T08:50:31.547Z</updated>
     
@@ -175,23 +175,23 @@
     
     </summary>
     
-      <category term="GeeksforGeeks" scheme="http://rovo98.github.io/categories/GeeksforGeeks/"/>
+      <category term="GeeksforGeeks" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/"/>
     
-      <category term="Computer Network" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/"/>
+      <category term="Computer Network" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/"/>
     
-      <category term="Basics" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/Basics/"/>
+      <category term="Basics" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/Basics/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>计算机网络目标 | Network goals</title>
-    <link href="http://rovo98.github.io/posts/8a6daeb5/"/>
-    <id>http://rovo98.github.io/posts/8a6daeb5/</id>
+    <link href="http://rovo98.coding.me/posts/8a6daeb5/"/>
+    <id>http://rovo98.coding.me/posts/8a6daeb5/</id>
     <published>2018-05-19T16:00:03.000Z</published>
     <updated>2018-07-31T10:11:14.823Z</updated>
     
@@ -203,23 +203,23 @@
     
     </summary>
     
-      <category term="GeeksforGeeks" scheme="http://rovo98.github.io/categories/GeeksforGeeks/"/>
+      <category term="GeeksforGeeks" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/"/>
     
-      <category term="Computer Network" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/"/>
+      <category term="Computer Network" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/"/>
     
-      <category term="Basics" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/Basics/"/>
+      <category term="Basics" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/Basics/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>互联网与网络 | The Internet and the Web</title>
-    <link href="http://rovo98.github.io/posts/28f758bc/"/>
-    <id>http://rovo98.github.io/posts/28f758bc/</id>
+    <link href="http://rovo98.coding.me/posts/28f758bc/"/>
+    <id>http://rovo98.coding.me/posts/28f758bc/</id>
     <published>2018-05-19T16:00:02.000Z</published>
     <updated>2018-07-31T09:31:04.837Z</updated>
     
@@ -231,23 +231,23 @@
     
     </summary>
     
-      <category term="GeeksforGeeks" scheme="http://rovo98.github.io/categories/GeeksforGeeks/"/>
+      <category term="GeeksforGeeks" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/"/>
     
-      <category term="Computer Network" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/"/>
+      <category term="Computer Network" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/"/>
     
-      <category term="Basics" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/Basics/"/>
+      <category term="Basics" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/Basics/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>计算机网络基础 | Basics of Computer Network</title>
-    <link href="http://rovo98.github.io/posts/c88d46b1/"/>
-    <id>http://rovo98.github.io/posts/c88d46b1/</id>
+    <link href="http://rovo98.coding.me/posts/c88d46b1/"/>
+    <id>http://rovo98.coding.me/posts/c88d46b1/</id>
     <published>2018-05-19T16:00:01.000Z</published>
     <updated>2018-07-31T11:30:28.308Z</updated>
     
@@ -259,23 +259,23 @@
     
     </summary>
     
-      <category term="GeeksforGeeks" scheme="http://rovo98.github.io/categories/GeeksforGeeks/"/>
+      <category term="GeeksforGeeks" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/"/>
     
-      <category term="Computer Network" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/"/>
+      <category term="Computer Network" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/"/>
     
-      <category term="Basics" scheme="http://rovo98.github.io/categories/GeeksforGeeks/Computer-Network/Basics/"/>
+      <category term="Basics" scheme="http://rovo98.coding.me/categories/GeeksforGeeks/Computer-Network/Basics/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="计算机网络" scheme="http://rovo98.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://rovo98.coding.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7通过yum(yellow dog update modifier) 安装mysql5.7</title>
-    <link href="http://rovo98.github.io/posts/86d29d2c/"/>
-    <id>http://rovo98.github.io/posts/86d29d2c/</id>
+    <link href="http://rovo98.coding.me/posts/86d29d2c/"/>
+    <id>http://rovo98.coding.me/posts/86d29d2c/</id>
     <published>2018-04-22T16:00:00.000Z</published>
     <updated>2018-06-12T06:50:18.590Z</updated>
     
@@ -287,17 +287,17 @@
     
     </summary>
     
-      <category term="mysql" scheme="http://rovo98.github.io/categories/mysql/"/>
+      <category term="mysql" scheme="http://rovo98.coding.me/categories/mysql/"/>
     
     
-      <category term="mysql5.7安装" scheme="http://rovo98.github.io/tags/mysql5-7%E5%AE%89%E8%A3%85/"/>
+      <category term="mysql5.7安装" scheme="http://rovo98.coding.me/tags/mysql5-7%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
   <entry>
     <title>Hibernate基础学习</title>
-    <link href="http://rovo98.github.io/posts/b19895ed/"/>
-    <id>http://rovo98.github.io/posts/b19895ed/</id>
+    <link href="http://rovo98.coding.me/posts/b19895ed/"/>
+    <id>http://rovo98.coding.me/posts/b19895ed/</id>
     <published>2018-04-13T11:41:44.000Z</published>
     <updated>2018-07-21T07:16:10.477Z</updated>
     
@@ -309,23 +309,23 @@
     
     </summary>
     
-      <category term="Java框架学习" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Java框架学习" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="Hibernate" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Hibernate/"/>
+      <category term="Hibernate" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Hibernate/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java框架基础" scheme="http://rovo98.github.io/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java框架基础" scheme="http://rovo98.coding.me/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="hibernate" scheme="http://rovo98.github.io/tags/hibernate/"/>
+      <category term="hibernate" scheme="http://rovo98.coding.me/tags/hibernate/"/>
     
   </entry>
   
   <entry>
     <title>Java持久化框架基础学习笔记 - ORM</title>
-    <link href="http://rovo98.github.io/posts/4e7f2cb9/"/>
-    <id>http://rovo98.github.io/posts/4e7f2cb9/</id>
+    <link href="http://rovo98.coding.me/posts/4e7f2cb9/"/>
+    <id>http://rovo98.coding.me/posts/4e7f2cb9/</id>
     <published>2018-04-12T11:41:44.000Z</published>
     <updated>2018-08-01T14:24:05.567Z</updated>
     
@@ -337,21 +337,21 @@
     
     </summary>
     
-      <category term="Java框架学习" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Java框架学习" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java框架基础" scheme="http://rovo98.github.io/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java框架基础" scheme="http://rovo98.coding.me/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="ORM" scheme="http://rovo98.github.io/tags/ORM/"/>
+      <category term="ORM" scheme="http://rovo98.coding.me/tags/ORM/"/>
     
   </entry>
   
   <entry>
     <title>Struts 2基础学习 - Interceptors</title>
-    <link href="http://rovo98.github.io/posts/5e817364/"/>
-    <id>http://rovo98.github.io/posts/5e817364/</id>
+    <link href="http://rovo98.coding.me/posts/5e817364/"/>
+    <id>http://rovo98.coding.me/posts/5e817364/</id>
     <published>2018-04-11T06:06:12.000Z</published>
     <updated>2018-06-26T14:39:51.950Z</updated>
     
@@ -363,23 +363,23 @@
     
     </summary>
     
-      <category term="Java框架学习" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Java框架学习" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="Struts 2" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
+      <category term="Struts 2" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java框架基础" scheme="http://rovo98.github.io/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java框架基础" scheme="http://rovo98.coding.me/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="Struts 2基础学习" scheme="http://rovo98.github.io/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Struts 2基础学习" scheme="http://rovo98.coding.me/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Struts 2基础学习 - Actions</title>
-    <link href="http://rovo98.github.io/posts/338c78b5/"/>
-    <id>http://rovo98.github.io/posts/338c78b5/</id>
+    <link href="http://rovo98.coding.me/posts/338c78b5/"/>
+    <id>http://rovo98.coding.me/posts/338c78b5/</id>
     <published>2018-04-11T06:01:19.000Z</published>
     <updated>2018-06-23T08:21:16.963Z</updated>
     
@@ -391,23 +391,23 @@
     
     </summary>
     
-      <category term="Java框架学习" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Java框架学习" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="Struts 2" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
+      <category term="Struts 2" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java框架基础" scheme="http://rovo98.github.io/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java框架基础" scheme="http://rovo98.coding.me/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="Struts 2基础学习" scheme="http://rovo98.github.io/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Struts 2基础学习" scheme="http://rovo98.coding.me/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Struts 2基础学习 - 配置文件</title>
-    <link href="http://rovo98.github.io/posts/3fe084cc/"/>
-    <id>http://rovo98.github.io/posts/3fe084cc/</id>
+    <link href="http://rovo98.coding.me/posts/3fe084cc/"/>
+    <id>http://rovo98.coding.me/posts/3fe084cc/</id>
     <published>2018-04-11T06:01:01.000Z</published>
     <updated>2018-06-22T15:22:08.199Z</updated>
     
@@ -419,23 +419,23 @@
     
     </summary>
     
-      <category term="Java框架学习" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Java框架学习" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="Struts 2" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
+      <category term="Struts 2" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java框架基础" scheme="http://rovo98.github.io/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java框架基础" scheme="http://rovo98.coding.me/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="Struts 2基础学习" scheme="http://rovo98.github.io/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Struts 2基础学习" scheme="http://rovo98.coding.me/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Struts 2基础学习 - 架构</title>
-    <link href="http://rovo98.github.io/posts/4fe73428/"/>
-    <id>http://rovo98.github.io/posts/4fe73428/</id>
+    <link href="http://rovo98.coding.me/posts/4fe73428/"/>
+    <id>http://rovo98.coding.me/posts/4fe73428/</id>
     <published>2018-04-11T06:00:01.000Z</published>
     <updated>2018-06-22T15:22:09.910Z</updated>
     
@@ -447,23 +447,23 @@
     
     </summary>
     
-      <category term="Java框架学习" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Java框架学习" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="Struts 2" scheme="http://rovo98.github.io/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
+      <category term="Struts 2" scheme="http://rovo98.coding.me/categories/Java%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/Struts-2/"/>
     
     
-      <category term="学习笔记" scheme="http://rovo98.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://rovo98.coding.me/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java框架基础" scheme="http://rovo98.github.io/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java框架基础" scheme="http://rovo98.coding.me/tags/Java%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="Struts 2基础学习" scheme="http://rovo98.github.io/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Struts 2基础学习" scheme="http://rovo98.coding.me/tags/Struts-2%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Union-Find -- 动态连通性问题算法</title>
-    <link href="http://rovo98.github.io/posts/b3f33dac/"/>
-    <id>http://rovo98.github.io/posts/b3f33dac/</id>
+    <link href="http://rovo98.coding.me/posts/b3f33dac/"/>
+    <id>http://rovo98.coding.me/posts/b3f33dac/</id>
     <published>2018-03-07T08:00:12.000Z</published>
     <updated>2018-07-22T14:38:13.648Z</updated>
     
@@ -475,19 +475,19 @@
     
     </summary>
     
-      <category term="Algorithms" scheme="http://rovo98.github.io/categories/Algorithms/"/>
+      <category term="Algorithms" scheme="http://rovo98.coding.me/categories/Algorithms/"/>
     
-      <category term="Union Find" scheme="http://rovo98.github.io/categories/Algorithms/Union-Find/"/>
+      <category term="Union Find" scheme="http://rovo98.coding.me/categories/Algorithms/Union-Find/"/>
     
     
-      <category term="union-find" scheme="http://rovo98.github.io/tags/union-find/"/>
+      <category term="union-find" scheme="http://rovo98.coding.me/tags/union-find/"/>
     
   </entry>
   
   <entry>
     <title>基本查找算法 - basical searching algorithms</title>
-    <link href="http://rovo98.github.io/posts/d83777d2/"/>
-    <id>http://rovo98.github.io/posts/d83777d2/</id>
+    <link href="http://rovo98.coding.me/posts/d83777d2/"/>
+    <id>http://rovo98.coding.me/posts/d83777d2/</id>
     <published>2018-03-06T16:00:00.000Z</published>
     <updated>2018-07-09T07:55:05.388Z</updated>
     
@@ -499,19 +499,19 @@
     
     </summary>
     
-      <category term="Algorithms" scheme="http://rovo98.github.io/categories/Algorithms/"/>
+      <category term="Algorithms" scheme="http://rovo98.coding.me/categories/Algorithms/"/>
     
-      <category term="searching algs" scheme="http://rovo98.github.io/categories/Algorithms/searching-algs/"/>
+      <category term="searching algs" scheme="http://rovo98.coding.me/categories/Algorithms/searching-algs/"/>
     
     
-      <category term="basical searching algs" scheme="http://rovo98.github.io/tags/basical-searching-algs/"/>
+      <category term="basical searching algs" scheme="http://rovo98.coding.me/tags/basical-searching-algs/"/>
     
   </entry>
   
   <entry>
     <title>快速排序 - quickSort</title>
-    <link href="http://rovo98.github.io/posts/d9de8e4c/"/>
-    <id>http://rovo98.github.io/posts/d9de8e4c/</id>
+    <link href="http://rovo98.coding.me/posts/d9de8e4c/"/>
+    <id>http://rovo98.coding.me/posts/d9de8e4c/</id>
     <published>2018-03-05T16:00:00.000Z</published>
     <updated>2018-07-30T08:58:58.713Z</updated>
     
@@ -523,12 +523,12 @@
     
     </summary>
     
-      <category term="Algorithms" scheme="http://rovo98.github.io/categories/Algorithms/"/>
+      <category term="Algorithms" scheme="http://rovo98.coding.me/categories/Algorithms/"/>
     
-      <category term="sorting algs" scheme="http://rovo98.github.io/categories/Algorithms/sorting-algs/"/>
+      <category term="sorting algs" scheme="http://rovo98.coding.me/categories/Algorithms/sorting-algs/"/>
     
     
-      <category term="sorting algs" scheme="http://rovo98.github.io/tags/sorting-algs/"/>
+      <category term="sorting algs" scheme="http://rovo98.coding.me/tags/sorting-algs/"/>
     
   </entry>
   

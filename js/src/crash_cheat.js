@@ -13,6 +13,7 @@
          document.title = '噫又好了~' + OriginTitle;
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
-         }, 2000);
+             $('[rel="icon"]').attr('href', '/images/my-favicon-32x32.png');
+         }, 5000);
      }
  });

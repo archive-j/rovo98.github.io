@@ -5,7 +5,7 @@
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
          $('[rel="icon"]').attr('href', "/images/favicon-sad.png");
-         document.title = '页面崩溃啦 ~';
+         document.title = '页面崩溃啦 ~' + OriginTitle;
          clearTimeout(titleTime);
      }
      else {

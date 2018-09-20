@@ -14,6 +14,6 @@
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
              $('[rel="icon"]').attr('href', '/images/my-favicon-32x32.png');
-         }, 5000);
+         }, 2000);
      }
  });

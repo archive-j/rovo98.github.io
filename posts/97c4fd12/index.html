@@ -89,20 +89,20 @@
 
 
 
-<meta name="description" content="最近换了Manjaro linux系统，发现通过系统pacman -S vim安装的无图形版本vim不支持clipboard功能。  本想看能不能通过某种方式，来扩展现有安装好的vim,但是通过google了解到：  VIM is intended to be a portable editor that “just works” on all systems. By having the def">
+<meta name="description" content="最近换了Manjaro linux系统，发现通过系统pacman -S vim安装的无图形版本vim不支持clipboard功能。  本想看能不能通过某种方式，来扩展现有安装好的vim,但是通过google了解到：VIM is intended to be a portable editor that “just works” on all systems. By having the defau">
 <meta name="keywords" content="linux,vim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编译自己的Vim8.1">
 <meta property="og:url" content="http://rovo98.github.io/posts/97c4fd12/index.html">
 <meta property="og:site_name" content="rovo98&#39;s Blog">
-<meta property="og:description" content="最近换了Manjaro linux系统，发现通过系统pacman -S vim安装的无图形版本vim不支持clipboard功能。  本想看能不能通过某种方式，来扩展现有安装好的vim,但是通过google了解到：  VIM is intended to be a portable editor that “just works” on all systems. By having the def">
+<meta property="og:description" content="最近换了Manjaro linux系统，发现通过系统pacman -S vim安装的无图形版本vim不支持clipboard功能。  本想看能不能通过某种方式，来扩展现有安装好的vim,但是通过google了解到：VIM is intended to be a portable editor that “just works” on all systems. By having the defau">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://rovo98.github.io/images/linux/vim-version-original.png">
 <meta property="og:image" content="http://rovo98.github.io/posts/97c4fd12/vim_installed.png">
-<meta property="og:updated_time" content="2018-10-08T05:08:41.105Z">
+<meta property="og:updated_time" content="2018-10-31T08:49:27.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译自己的Vim8.1">
-<meta name="twitter:description" content="最近换了Manjaro linux系统，发现通过系统pacman -S vim安装的无图形版本vim不支持clipboard功能。  本想看能不能通过某种方式，来扩展现有安装好的vim,但是通过google了解到：  VIM is intended to be a portable editor that “just works” on all systems. By having the def">
+<meta name="twitter:description" content="最近换了Manjaro linux系统，发现通过系统pacman -S vim安装的无图形版本vim不支持clipboard功能。  本想看能不能通过某种方式，来扩展现有安装好的vim,但是通过google了解到：VIM is intended to be a portable editor that “just works” on all systems. By having the defau">
 <meta name="twitter:image" content="http://rovo98.github.io/images/linux/vim-version-original.png">
 
 
@@ -479,14 +479,12 @@
       
         <p>最近换了<code>Manjaro</code> linux系统，发现通过系统<code>pacman -S vim</code>安装的无图形版本<code>vim</code>不支持<code>clipboard</code>功能。</p>
 <p><img src="/images/linux/vim-version-original.png" alt=""></p>
-<p>本想看能不能通过某种方式，来扩展现有安装好的<code>vim</code>,但是通过<code>google</code>了解到：</p>
-<blockquote>
-<p>VIM is intended to be a portable editor that “just works” on all systems. By having the default version use the clipboard functionality, it will need to link against X11 libraries, and a separate version of VIM would need to be compiled for desktop versus server (no pre-installed X11/xorg) builds. This is why the vim and vim-gtk packages are provided.</p>
+<p>本想看能不能通过某种方式，来扩展现有安装好的<code>vim</code>,但是通过<code>google</code>了解到：<br><blockquote class="blockquote-center"><p>VIM is intended to be a portable editor that “just works” on all systems. By having the default version use the clipboard functionality, it will need to link against X11 libraries, and a separate version of VIM would need to be compiled for desktop versus server (no pre-installed X11/xorg) builds. This is why the vim and vim-gtk packages are provided.</p>
 <p>VIM旨在成为一个可在所有系统上“正常工作”的便携式编辑器。通过使默认版本使用剪贴板功能，它将需要链接到X11库，并且需要针对桌面与服务器（没有预安装的X11 / xorg）构建编译单独版本的VIM。这就是提供vim和vim-gtk软件包的原因。</p>
-</blockquote>
+</blockquote></p>
 <a id="more"></a>
 <p>虽然知道<code>gvim</code>带有支持<code>clipboard</code>的<code>vim</code>，但是我又不想装<code>gvim</code>。自己的系统又有<code>X11</code>库和 <code>Xorg</code>，所以决定自己编译一个<code>vim</code>.</p>
-<p><strong>[注意]</strong>： 对于没有<code>X11</code>和<code>Xorg</code>的需要在编译前配置好，否则编译会出错.</p>
+<div class="note warning"><p><strong>注意</strong>： 对于没有<code>X11</code>和<code>Xorg</code>的需要在编译前配置好，否则编译会出错.</p></div>
 <h3 id="一、从github上获取vim的源码"><a href="#一、从github上获取vim的源码" class="headerlink" title="一、从github上获取vim的源码"></a>一、从github上获取vim的源码</h3><p>直接使用<code>git</code> clone <code>vim</code>仓库：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/vim/vim.git vim_source</span><br></pre></td></tr></table></figure>
 <h3 id="二、配置、编译并安装"><a href="#二、配置、编译并安装" class="headerlink" title="二、配置、编译并安装"></a>二、配置、编译并安装</h3><p>我的编译配置：</p>
@@ -505,11 +503,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Vim[compiled by rovo98]</span><br><span class="line">Version=8.1</span><br><span class="line">Exec=vim %f</span><br><span class="line">Comment=Vim is a highly configurable text editor for efficiently creating and changing any kind of text.</span><br><span class="line">Icon=/usr/share/vim/vim81/src/vim.ico</span><br><span class="line">Type=Application</span><br><span class="line">MimeType=text/plain;</span><br><span class="line">Terminal=true</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Categories=Utility;</span><br></pre></td></tr></table></figure>
 <p>把<code>vim.desktop</code>放到<code>/usr/share/applications/</code>下就行了。</p>
 <p>现在可以享受你自己编译的vim了。</p>
-<p>参考链接: </p>
+<div class="note primary"><p>参考链接: </p>
 <ul>
 <li><a href="https://vi.stackexchange.com/questions/13564/why-is-vim-for-debian-compiled-without-clipboard" target="_blank" rel="noopener">https://vi.stackexchange.com/questions/13564/why-is-vim-for-debian-compiled-without-clipboard</a></li>
 <li><a href="https://stackoverflow.com/questions/11416069/compile-vim-with-clipboard-and-xterm" target="_blank" rel="noopener">https://stackoverflow.com/questions/11416069/compile-vim-with-clipboard-and-xterm</a></li>
-</ul>
+</ul></div>
 
       
     </div>

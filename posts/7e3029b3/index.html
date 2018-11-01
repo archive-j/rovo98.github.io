@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://rovo98.github.io/posts/7e3029b3/github_ipaddress.png">
 <meta property="og:image" content="http://rovo98.github.io/posts/7e3029b3/ping_test.png">
 <meta property="og:image" content="http://rovo98.github.io/posts/7e3029b3/github_test.gif">
-<meta property="og:updated_time" content="2018-10-08T05:08:42.868Z">
+<meta property="og:updated_time" content="2018-11-01T13:38:38.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决Github国内访问出现的问题">
 <meta name="twitter:description" content="主要通过修改hosts文件解决Github在国内访问不了、访问慢和页面加载异常的问题(没钱买vpn~)。 简单了解一下github, github是目前全球最大的男性同性交友网站(~滑稽~), 使用示例如下：">
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  721
+                  722
                 </span>
               
 
@@ -490,18 +490,18 @@
 <p>此时再刷新页面即可。此时可以正常访问github，但是访问速度还是很慢，我们接着做优化。</p>
 <h4 id="Github-访问提速"><a href="#Github-访问提速" class="headerlink" title="Github 访问提速"></a>Github 访问提速</h4><p>在hosts文件中继续加入，如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># GitHub Start</span><br><span class="line">192.30.253.112 github.com</span><br><span class="line">192.30.253.119 gist.github.com</span><br><span class="line">151.101.228.133 assets-cdn.github.com</span><br><span class="line">151.101.228.133 raw.githubusercontent.com</span><br><span class="line">151.101.228.133 gist.githubusercontent.com</span><br><span class="line">151.101.228.133 cloud.githubusercontent.com</span><br><span class="line">151.101.228.133 camo.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars0.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars1.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars2.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars3.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars4.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars5.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars6.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars7.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars8.githubusercontent.com</span><br><span class="line">192.30.253.116  api.github.com</span><br><span class="line"># GitHub End</span><br></pre></td></tr></table></figure>
-<p><strong>[notice]</strong> : 这里域名对应的ip是通过dns查询工具查询得到的，你应当选择的是延时相对较小且比较稳定的ip。</p>
+<div class="note warning"><p><strong>注意</strong> : 这里域名对应的ip是通过dns查询工具查询得到的，你应当选择的是延时相对较小且比较稳定的ip。</p></div>
 <p>例如，上面的<code>151.101.228.133</code>是对我来说较好的ip:</p>
 <p><img src="ping_test.png" alt="dns 查询检测"></p>
-<p>推荐的dns查询检测工具：</p>
+<div class="note info"><p>推荐的dns查询检测工具：</p>
 <ul>
 <li><a href="https://tool.lu/dns/" target="_blank" rel="noopener">DNS查询 - 在线工具</a></li>
 <li><a href="http://tool.chinaz.com/dns/" target="_blank" rel="noopener">DNS检测|DNS查询-站长工具</a></li>
 </ul>
-<p>你可对单个域名多查询几次，以挑选稳定且速度较快的ip。</p>
+<p>你可对单个域名多查询几次，以挑选稳定且速度较快的ip。</p></div>
 <h4 id="快速地访问github"><a href="#快速地访问github" class="headerlink" title="快速地访问github"></a>快速地访问github</h4><p>再次刷新dns缓存后，你已经可以快速地访问github了。</p>
 <p><img src="github_test.gif" alt=""></p>
-<p>参考：<a href="https://github.com/chenxuhua/issues-blog/issues/3" target="_blank" rel="noopener">https://github.com/chenxuhua/issues-blog/issues/3</a></p>
+<div class="note primary"><p>参考：<a href="https://github.com/chenxuhua/issues-blog/issues/3" target="_blank" rel="noopener">https://github.com/chenxuhua/issues-blog/issues/3</a></p></div>
 
       
     </div>

@@ -117,7 +117,7 @@
 <meta property="og:image" content="http://rovo98.github.io/posts/a1898ce2/win10.png">
 <meta property="og:image" content="http://rovo98.github.io/posts/a1898ce2/manjaro-desktop.png">
 <meta property="og:image" content="http://rovo98.github.io/posts/a1898ce2/kali.png">
-<meta property="og:updated_time" content="2018-10-30T06:57:16.901Z">
+<meta property="og:updated_time" content="2018-11-03T08:50:24.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Manjaro linux 安装与配置">
 <meta name="twitter:description" content="Manjaro是一款基于Arch Linux、对用户友好、全球排名第一的Linux发行版。（排名数据源于DistroWatch，统计日期2018.08.22，时间段3个月。）在Linux圈，Arch的确是一个异常强大的发行版。它有3个无与伦比的优势：  滚动更新可以使软件保持最新； AUR软件仓库有着世界上最齐全的Linux软件（参考《一张列表展示ArchLinux系软件有多丰富——看哭百万D">
@@ -447,7 +447,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2,229
+                  2,243
                 </span>
               
 
@@ -527,7 +527,7 @@ bs=4M</code>, <code>of</code>指定烧录U盘的挂载位置;</li>
 <li>屏幕亮度无法调节或异常的问题： <code>Arch Wiki</code>已经给出很详细的解决方法:<br>链接: <a href="https://wiki.archlinux.org/index.php/backlight" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/backlight</a><br>例如：开机亮度设置: <code>vim /etc/rc.local</code>:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh -e</span><br><span class="line">#</span><br><span class="line"># rc.local</span><br><span class="line">#</span><br><span class="line"># This script is executed at the end of the each multiuser runlevel.</span><br><span class="line"># Make sure that the script will &quot;exit 0&quot; on successs or any other value on error</span><br><span class="line"># </span><br><span class="line"># In order to enable or disable this script just change the execution bits.</span><br><span class="line"># </span><br><span class="line"># By default this script does nothing.</span><br><span class="line"></span><br><span class="line">echo 127 &gt;&gt; /sys/class/backlight/intel_backlight/brightness</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><strong>[注意]</strong>: 对于安装<code>Manjaro</code>系统出现的问题，大多数都可以在官方的论坛<a href="https://forum.manjaro.org/" target="_blank" rel="noopener">Manjaro Forum</a>以及<a href="https://wiki.manjaro.org/index.php?title=Main_Page" target="_blank" rel="noopener">Manjaro Wiki</a>，还有<code>Arch Linux</code>的<a href="https://wiki.manjaro.org" target="_blank" rel="noopener">Arch Wiki</a>以及上找到解决方法。</p>
+<div class="note primary"><p>对于安装<code>Manjaro</code>系统出现的问题，大多数都可以在官方的论坛<a href="https://forum.manjaro.org/" target="_blank" rel="noopener">Manjaro Forum</a>以及<a href="https://wiki.manjaro.org/index.php?title=Main_Page" target="_blank" rel="noopener">Manjaro Wiki</a>，还有<code>Arch Linux</code>的<a href="https://wiki.manjaro.org" target="_blank" rel="noopener">Arch Wiki</a>以及上找到解决方法。</p></div>
 <h3 id="二、Manjaro-配置"><a href="#二、Manjaro-配置" class="headerlink" title="二、Manjaro 配置"></a>二、Manjaro 配置</h3><p>简单说一下一些安装系统之后的一些常规配置。</p>
 <h4 id="配置更新源并更新系统"><a href="#配置更新源并更新系统" class="headerlink" title="配置更新源并更新系统"></a>配置更新源并更新系统</h4><ol>
 <li><p>配置中国的mirrors：</p>
@@ -554,7 +554,8 @@ bs=4M</code>, <code>of</code>指定烧录U盘的挂载位置;</li>
 <p>重启即可。</p>
 <h4 id="配置Intel-和-Nvidia-双显卡切换"><a href="#配置Intel-和-Nvidia-双显卡切换" class="headerlink" title="配置Intel 和 Nvidia 双显卡切换"></a>配置Intel 和 Nvidia 双显卡切换</h4><p>Manjaro 提供了强大的硬件检测模块<code>mhwd</code>，可以很方便的安装各种驱动，要实现Intel 和 Nvidia 双显卡切换，我们需要安装video-hybrid-intel-nvidia-bumblebee <code>nvidia</code>闭源驱动和intel驱动的混合版<code>bumblebee</code>。对于之前安装系统是在<code>Live</code>启动菜单选择<code>Driver=no-free</code>的可以看看这个驱动是否已经安装：<br>系统设置中的硬件设置:<br><img src="manjaro-graphic-cards.png" alt=""><br>或<br><br><img src="manjaro-mhwd-installed-pci.png" alt=""></p>
 <p>对于未安装的，这里提供一个最为简单的方式，<strong>直接在硬件设置中，右键安装即可，这样可以省去自己去添加用户组和开机启动，以及切换状态初始化</strong></p>
-<p><strong>[注意：]</strong> 下面的这些依赖必须安装，否则会出现独立显卡无法正常工作的问题(fps跟集成显卡差不多)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S virtualgl lib32-virtualgl</span><br></pre></td></tr></table></figure></p>
+<div class="note warning"><p><strong>[注意：]</strong> 下面的这些依赖必须安装，否则会出现独立显卡无法正常工作的问题(fps跟集成显卡差不多)：</p></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S virtualgl lib32-virtualgl</span><br></pre></td></tr></table></figure>
 <p>对于独立显卡的使用，可以使用<code>bbswitch</code>来进行切换开关，然后使用<code>optirun</code>来运行程序:</p>
 <blockquote>
 <ol>
@@ -589,7 +590,11 @@ bs=4M</code>, <code>of</code>指定烧录U盘的挂载位置;</li>
 <p><img src="disk-structure.png" alt=""></p>
 <p>然后使用 <code>REfind</code>来管理和引导系统:</p>
 <p><img src="refind-menu.jpg" alt=""></p>
-<p>对于Refind有兴趣的可以直接<code>google</code>或<code>baidu</code>了解一下，选择一个现有的主题然后自己稍微进行配置一下，就可以了。</p>
+<div class="note primary"><p>对于Refind有兴趣的可以直接<code>google</code>或<code>baidu</code>了解一下，选择一个现有的主题然后自己稍微进行配置一下，就可以了。<br>参考:</p>
+<ul>
+<li><a href="http://www.rodsbooks.com/refind/" target="_blank" rel="noopener">http://www.rodsbooks.com/refind/</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/REFInd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="noopener">Arch Wiki 上关于refind的内容</a>)</li>
+</ul></div>
 <h4 id="各个系统桌面"><a href="#各个系统桌面" class="headerlink" title="各个系统桌面"></a>各个系统桌面</h4><ul>
 <li>Win10 LTSB</li>
 </ul>

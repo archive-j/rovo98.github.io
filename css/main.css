@@ -2177,7 +2177,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #329d24;
+  background: #ff5534;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3481,6 +3481,12 @@ img:hover {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: linear-gradient(to bottom right, rgba(27,94,91,0.88) 20%, rgba(209,67,8,0.9) 100%) 50% 50% fixed;
+}
+.footer {
+  color: #323232;
 }
 .main-inner {
   opacity: 0.95;

@@ -626,7 +626,7 @@
 <li>精确写法：<br>0-99 : <code>[0-9]?\d</code>        100-199 : <code>1\d{2}</code><br>200-249 : <code>2[0-4]\d</code>   250-255 : <code>25[0-5]</code><br><code>(([0-9]?\d|1\d{2}|2[0-4]\d|25[0-5]).){3}([0-9]?\d|1\d{2}|2[0-4]\d|25[0-5])</code></li>
 </ul>
 <h3 id="Re库的基本使用"><a href="#Re库的基本使用" class="headerlink" title="Re库的基本使用"></a>Re库的基本使用</h3><h4 id="Re库介绍"><a href="#Re库介绍" class="headerlink" title="Re库介绍"></a>Re库介绍</h4><p>Re库是Python的标准库，主要用于字符串匹配。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br></pre></td></tr></table></figure></div>
 <h4 id="正则表达式的表示类型"><a href="#正则表达式的表示类型" class="headerlink" title="正则表达式的表示类型"></a>正则表达式的表示类型</h4><ul>
 <li>raw string 类型(原生字符串类型) —— 不包含转义字符<br>re 库采用raw string 类型表示正则表达式，表示为：r’text’</li>
 <li>string类型， 更繁琐  —— 需要双重转义</li>
@@ -726,7 +726,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="Re库的另一种等价用法"><a href="#Re库的另一种等价用法" class="headerlink" title="Re库的另一种等价用法"></a>Re库的另一种等价用法</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rst = re.search(<span class="string">r'[1-9]\d&#123;5&#125;'</span>, <span class="string">'BIT100081'</span>)</span><br><span class="line"><span class="comment">#函数式用法： 一次性操作</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#面向对象用法：编译后的多次操作</span></span><br><span class="line">pat = re.compile(<span class="string">r'[1-9]\d&#123;5&#125;'</span>)</span><br><span class="line">rst = pat.search(<span class="string">'BIT100081'</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="Re库的另一种等价用法"><a href="#Re库的另一种等价用法" class="headerlink" title="Re库的另一种等价用法"></a>Re库的另一种等价用法</h5><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rst = re.search(<span class="string">r'[1-9]\d&#123;5&#125;'</span>, <span class="string">'BIT100081'</span>)</span><br><span class="line"><span class="comment">#函数式用法： 一次性操作</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#面向对象用法：编译后的多次操作</span></span><br><span class="line">pat = re.compile(<span class="string">r'[1-9]\d&#123;5&#125;'</span>)</span><br><span class="line">rst = pat.search(<span class="string">'BIT100081'</span>)</span><br></pre></td></tr></table></figure></div>
 <h5 id="regex-re-compile-pattern-flags-0"><a href="#regex-re-compile-pattern-flags-0" class="headerlink" title="regex  = re.compile(pattern, flags=0)"></a><code>regex  = re.compile(pattern, flags=0)</code></h5><ul>
 <li>将正则表达式的字符串形式编译成正则表达式对象</li>
 </ul>
@@ -1815,9 +1815,9 @@
 <link rel="stylesheet" href="/aplayer/APlayer.min.css">
 <div id="aplayer"></div>
 <script type="text/javascript" src="/aplayer/APlayer.min.js"></script>
-<script type="text/javascript" src="/aplayer/music.js"></script>
+<script type="text/javascript" src="/aplayer/music.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":80,"height":180},"mobile":{"show":false}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":80,"height":180},"mobile":{"show":false}});</script></body>
 </html>

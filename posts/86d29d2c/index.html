@@ -474,30 +474,30 @@
 
       
         <a id="more"></a>
-<h3 id="配置yum源"><a href="#配置yum源" class="headerlink" title="配置yum源"></a>配置yum源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载mysql安装源包</span></span><br><span class="line">root @~&gt; wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</span><br><span class="line"><span class="comment"># 安装mysql源</span></span><br><span class="line">root @~&gt; yum localinstall mysql57-community-release-el7-8.noarch.rpm</span><br></pre></td></tr></table></figure>
+<h3 id="配置yum源"><a href="#配置yum源" class="headerlink" title="配置yum源"></a>配置yum源</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载mysql安装源包</span></span><br><span class="line">root @~&gt; wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</span><br><span class="line"><span class="comment"># 安装mysql源</span></span><br><span class="line">root @~&gt; yum localinstall mysql57-community-release-el7-8.noarch.rpm</span><br></pre></td></tr></table></figure></div>
 <p>检查mysql源是否安装成功:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root @~&gt; yum repolist enabled | grep <span class="string">"mysql.*-community.*"</span></span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root @~&gt; yum repolist enabled | grep <span class="string">"mysql.*-community.*"</span></span><br></pre></td></tr></table></figure></div>
 <p>如下图则安装成功:</p>
 <p><img src="repo-resource.png" alt="mysql_source"></p>
-<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; yum install -y mysql-community-server</span><br></pre></td></tr></table></figure>
-<h3 id="启动MySQL服务并设置开机自动启动"><a href="#启动MySQL服务并设置开机自动启动" class="headerlink" title="启动MySQL服务并设置开机自动启动"></a>启动MySQL服务并设置开机自动启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; systemctl start mysqld</span><br></pre></td></tr></table></figure>
+<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; yum install -y mysql-community-server</span><br></pre></td></tr></table></figure></div>
+<h3 id="启动MySQL服务并设置开机自动启动"><a href="#启动MySQL服务并设置开机自动启动" class="headerlink" title="启动MySQL服务并设置开机自动启动"></a>启动MySQL服务并设置开机自动启动</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; systemctl start mysqld</span><br></pre></td></tr></table></figure></div>
 <p>查看MySQL启动状态</p>
 <p><img src="mysql-status.png" alt="mysqld进程状态"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; systemctl <span class="built_in">enable</span> mysqld</span><br><span class="line">root@ ~&gt; systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; systemctl <span class="built_in">enable</span> mysqld</span><br><span class="line">root@ ~&gt; systemctl daemon-reload</span><br></pre></td></tr></table></figure></div>
 <h3 id="修改默认密码"><a href="#修改默认密码" class="headerlink" title="修改默认密码"></a>修改默认密码</h3><p>刚安装完的mysql会自动给root用户分配一个临时密码，而且必须重新设置密码(从5.5版本开始)</p>
 <ul>
 <li>先查看root用户的临时密码</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; grep <span class="string">"temporary password"</span> /var/<span class="built_in">log</span>/mysqld.log</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ ~&gt; grep <span class="string">"temporary password"</span> /var/<span class="built_in">log</span>/mysqld.log</span><br></pre></td></tr></table></figure></div>
 <ul>
 <li>使用临时的密码登录进mysql来设置新的密码</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> PASSWORD = PASSWORD(<span class="string">'[YOUR_NEW_PASSWORD]'</span>)</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> PASSWORD = PASSWORD(<span class="string">'[YOUR_NEW_PASSWORD]'</span>)</span><br></pre></td></tr></table></figure></div>
 <p><img src="temporary-password.png" alt="查看临时密码"></p>
 <ul>
 <li>可能遇到的问题：设置的密码过于简单mysql报错:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your password does not satisfy the current policy requirements.</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your password does not satisfy the current policy requirements.</span><br></pre></td></tr></table></figure></div>
 <p>解决方法：由于刚安装的mysql的密码默认强度是最高的，若想要设置简单的密码就要修改<strong>validate_password_policy</strong>的值，</p>
 <h4 id="validate-password-policy有以下取值："><a href="#validate-password-policy有以下取值：" class="headerlink" title="validate_password_policy有以下取值："></a>validate_password_policy有以下取值：</h4><div class="table-container">
 <table>
@@ -527,19 +527,19 @@
 <ul>
 <li>设置安全级别</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> global validate_password_policy=0;</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> global validate_password_policy=0;</span><br></pre></td></tr></table></figure></div>
 <ul>
 <li>设置密码长度为8，可以设置为其他值，最小为4位</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> global validate_password_length=4;</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; <span class="built_in">set</span> global validate_password_length=4;</span><br></pre></td></tr></table></figure></div>
 <p>之后就可以设置简单的密码了。</p>
-<h3 id="允许root远程登录"><a href="#允许root远程登录" class="headerlink" title="允许root远程登录"></a>允许root远程登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; GRANT ALL PRIVILEGES ON *.* TO <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED BY <span class="string">'[YOUR_PASSWORD]'</span> WITH GRANT OPTION;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
+<h3 id="允许root远程登录"><a href="#允许root远程登录" class="headerlink" title="允许root远程登录"></a>允许root远程登录</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; GRANT ALL PRIVILEGES ON *.* TO <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED BY <span class="string">'[YOUR_PASSWORD]'</span> WITH GRANT OPTION;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure></div>
 <h3 id="修改字符集编码为UTF-8"><a href="#修改字符集编码为UTF-8" class="headerlink" title="修改字符集编码为UTF-8"></a>修改字符集编码为UTF-8</h3><ul>
 <li>查看当前字符编码</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show variables like <span class="string">"char%';</span></span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show variables like <span class="string">"char%';</span></span><br></pre></td></tr></table></figure></div>
 <p>检测是否都是utf-8(filesystem除外)，如果不是就需要修改。 <strong>character_set_server</strong>一般是lantin1。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止mysqld服务</span></span><br><span class="line">systemctl stop mysqld</span><br><span class="line"><span class="comment"># 进入my.cnf文件，一般是/etc/路径下</span></span><br><span class="line">vim /etc/my.cnf</span><br><span class="line"><span class="comment"># 在[mysqld]下追加character-set-server=utf-8</span></span><br><span class="line"><span class="comment"># 在[mysql]下追加default-character-set=utf-8</span></span><br><span class="line"><span class="comment"># 启动mysqld</span></span><br><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止mysqld服务</span></span><br><span class="line">systemctl stop mysqld</span><br><span class="line"><span class="comment"># 进入my.cnf文件，一般是/etc/路径下</span></span><br><span class="line">vim /etc/my.cnf</span><br><span class="line"><span class="comment"># 在[mysqld]下追加character-set-server=utf-8</span></span><br><span class="line"><span class="comment"># 在[mysql]下追加default-character-set=utf-8</span></span><br><span class="line"><span class="comment"># 启动mysqld</span></span><br><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></div>
 
       
     </div>
@@ -1531,9 +1531,9 @@
 <link rel="stylesheet" href="/aplayer/APlayer.min.css">
 <div id="aplayer"></div>
 <script type="text/javascript" src="/aplayer/APlayer.min.js"></script>
-<script type="text/javascript" src="/aplayer/music.js"></script>
+<script type="text/javascript" src="/aplayer/music.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":80,"height":180},"mobile":{"show":false}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":80,"height":180},"mobile":{"show":false}});</script></body>
 </html>

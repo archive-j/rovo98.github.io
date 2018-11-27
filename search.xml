@@ -178,6 +178,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Advanture 1 Leetcode - 944 - Delete Columns to Make Sorted]]></title>
+    <url>%2Fposts%2Ff5b699c8%2F</url>
+    <content type="text"><![CDATA[给出由 N 个小写字母串组成的数组 A，所有小写字母串的长度都相同。现在，我们可以选择任何一组删除索引，对于每个字符串，我们将删除这些索引中的所有字符。举个例子，如果字符串为 &quot;abcdef&quot;，且删除索引是 {0, 2, 3}，那么删除之后的最终字符串为 &quot;bef&quot;。假设我们选择了一组删除索引 D，在执行删除操作之后，A 中剩余的每一列都是有序的。形式上，第 c 列为 [A[0][c], A[1][c], ..., A[A.length-1][c]]返回 D.length 的最小可能值。 https://leetcode-cn.com/problems/container-with-most-water/(中文) https://leetcode.com/problems/container-with-most-water/(en)示例 1：输入：[“cba”,”daf”,”ghi”]输出：1示例 2：输入：[“a”,”b”]输出：0示例 3：输入：[“zyx”,”wvu”,”tsr”]输出：3提示：1 &lt;= A.length &lt;= 1001 &lt;= A[i].length &lt;= 1000 解题思路对于这种可以快速得出解题思路的题目： 由于每个字符串的长度一样，所以我们只需要依次比较字符串对应的每一列，判断是否满足非降序即可得到结果。 1234567891011121314class Solution &#123; public int minDeletionSize(String[] A) &#123; int count = 0; for (int i = A[0].length(); i++) &#123; for (int j = A.length-1; j++) &#123; if (A[j].charAt(i) &gt; A[j+1].charAt(i)) &#123; count++; break; &#125; &#125; &#125; return count; &#125;&#125; 复杂度分析(Complexity Analysis): 时间复杂度(Time complexity): $O(n)$ 空间复杂度(Space complexity): $O(1)$ 此题目，在leetcode上被归类为greedy，但我觉的解题思路并没怎么体现贪心算法的思想。。。]]></content>
+      <categories>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode-greedy-easy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Advantrue 1 - Leetcode 11 Container With Most Water]]></title>
     <url>%2Fposts%2Fdac7fdaa%2F</url>
     <content type="text"><![CDATA[给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。 https://leetcode-cn.com/problems/container-with-most-water/(中文) https://leetcode.com/problems/container-with-most-water/(en)说明：你不能倾斜容器，且 n 的值至少为 2。示例:输入: [1,8,6,2,5,4,8,3,7]输出: 49 解题思路对于这样的题目，很明显可以快速的使用brute-force方式得到解法: 12345678910111213class Solution &#123; public int maxArea(int[] height) &#123; int maxArea = Integer.MIN_VALUE; for (int i = 0; i &lt; height; i++) &#123; for (int j = i+1; j &lt; height; j++) &#123; int temp = (j-i) * (height[i]&gt;height[j]?height[j]:height[i]); if (temp &gt; maxArea) maxArea = temp; &#125; &#125; return maxArea; &#125;&#125; 复杂度分析(Complexity Analysis): 时间复杂度(Time complexity): $O(n^2)$ 空间复杂度(Space complexity): $O(1)$ 显然使用brute-force解法设计的算法是正确的，但是时间复杂度是$O(n^2)$级别，因此我们需要考虑优化。代码提交状况:运行时间(Runtime): 269 msbeats rate: 20.1% 其实仔细看的话，要使围成的矩形面积最大，无非就是让长和宽尽量的大，因此我们可以使用Two-pointers双指针的思想:使用两个指针i,j分别指向0和height.length-1，让一开始的x坐标距离最大化，然后判断它们所对应的高度谁低，依据较低的高度值计算面积，再将对应索引指针增1(对于低索引指针)或减1(高索引指针)。 12345678910111213141516171819class Solution &#123; public int maxArea(int[] height) &#123; int maxArea = Integer.MIN_VAlUE; int i = 0; int j = height.length-1; while (i &lt; j) &#123; // int x = j - i; // maxArea = Math.max(maxArea,Math.min(heigth[i], height[j])*x); // if (height[i] &lt; height[j]) &#123; // i++; // &#125; else &#123; // j--; // &#125; // 对代码进行缩减 maxArea = Math.max(maxArea, height[j]&lt;height[i]?(j-i)*height[j--]:(j-i))*height[i++]); &#125; return maxArea; &#125;&#125; 复杂度分析(Complexity Analysis): 时间复杂度(Time complexity): $O(n)$ 空间复杂度(Space complexity): $O(1)$ 使用双指针，只需要一次遍历就能得到结果。可以见得双指针是非常有效的工具，也是数组类问题中常见的解题思路: 例如，对于已经排好序的两数之和(Two sum - sorted)问题,就可以使用双指针进行解决。 代码提交状况:运行时间(Runtime): 6 msbeat rate: 65.95%]]></content>

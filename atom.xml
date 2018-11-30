@@ -428,6 +428,38 @@
   </entry>
   
   <entry>
+    <title>Advantrue 1 - Leetcode 189 - Rotate Array</title>
+    <link href="http://rovo98.github.io/posts/885fe7d0/"/>
+    <id>http://rovo98.github.io/posts/885fe7d0/</id>
+    <published>2018-02-02T02:00:00.000Z</published>
+    <updated>2018-11-30T16:16:21.492Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。<br>链接:</p><ol><li><a href="https://leetcode-cn.com/problems/rotate-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/rotate-array/</a>(中文)</li><li><a href="https://leetcode.com/problems/rotate-array/" target="_blank" rel="noopener">https://leetcode.com/problems/rotate-array/</a>(en)</li></ol><p>示例 1:</p><p>输入: [1,2,3,4,5,6,7] 和 k = 3<br>输出: [5,6,7,1,2,3,4]<br>解释:<br>向右旋转 1 步: [7,1,2,3,4,5,6]<br>向右旋转 2 步: [6,7,1,2,3,4,5]<br>向右旋转 3 步: [5,6,7,1,2,3,4]<br>示例 2:</p><p>输入: [-1,-100,3,99] 和 k = 2<br>输出: [3,99,-1,-100]<br>解释:<br>向右旋转 1 步: [99,-1,-100,3]<br>向右旋转 2 步: [3,99,-1,-100]<br>说明:</p><p>尽可能想出更多的解决方案，至少有三种不同的方法可以解决这个问题。<br>要求使用空间复杂度为 O(1) 的原地算法。</p></blockquote><a id="more"></a><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>首先考虑考虑<code>brute-force</code>暴力解法，要使数组中的元素整体右移<code>k</code>位，最直接的方式是循环<code>k</code>次，每次循环让每个元素依次跟最后一个元素进行交换<code>swap</code>即可。</p><blockquote><p>例如: input : [1, 2, 3, 4], k = 1<br>      loop1: 4, 2, 3, 1 -&gt;<br>             4, 1, 3, 2 -&gt;<br>             4, 1, 2, 3</p></blockquote><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length &lt;= <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> last = nums[nums.length-<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = nums[j];</span><br><span class="line">                nums[j] = last;</span><br><span class="line">                last = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p><strong>复杂度分析(Compelxity Analysis):</strong></p><ul><li>时间复杂度(Time complexity): $O(kn)$</li><li>空间复杂度(Space complexity): $O(1)$</li></ul><p>Submission status:</p><blockquote><p>该解法通过所有测试用例，但是执行时间为<code>109 ms</code>, 击败<code>14.9%</code>的<code>java</code>代码提交。</p></blockquote><div class="note primary"><p>解题思路二:</p><blockquote><p>利用辅助数组，先将需要移动变换的元素放在移动后的位置，再将辅助数组元素移回原数组.</p></blockquote></div><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length &lt; <span class="number">2</span>) <span class="keyword">return</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span>[] aux = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            aux[(i+k) % nums.length] = nums[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; aux.length; i++) &#123;</span><br><span class="line">            nums[i] = aux[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p><strong>复杂度分析(Compelxity Analysis):</strong></p><ul><li>时间复杂度(Time complexity): $O(n)$</li><li>空间复杂度(Space complexity): $O(n)$</li></ul><p>Submission status:</p><blockquote><p>代码提交运行时间: <code>1 ms</code> 击败<code>53.8%</code>的<code>java</code>提交代码。</p></blockquote><div class="note primary"><p>解题思路三:</p><p>除了上面给出的第二种方案，还有更好的解题方法，能够做到<code>O(n)</code>运行时间，以及<code>O(1)</code>的空间复杂度.</p></div><blockquote><p>思路: 拿题目给定的例子来说，[1,2,3,4,5,6,7], k = 3.<br>首先将数组划分成两个部分: <code>0~nums.length-k-1</code>,即<code>[1,2,3,4]和</code>nums.length-k ~ nums.length-1],即<code>[5,6,7]</code>,把两个部分进行翻转，此时数组变成<code>[4,3,2,1,7,6,5]</code>.<br>最后，将整个数组进行翻转即可得到我们想要的结果: <code>[5,6,7,1,2,3,4]</code>.</p></blockquote><div class="note warning"><p>需要注意的是，需要对<code>k</code>进行处理，当<code>k &gt; nums.length</code>情况，会出现越界情况。<br>解决方法: 使<code>k</code>进行 <strong>mod</strong> <code>nums.length</code>运算(<code>k = k % nums.length</code>).</p></div><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length &lt; <span class="number">2</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        k %= nums.length;</span><br><span class="line">        reverse(nums, <span class="number">0</span>, nums.length-k - <span class="number">1</span>);</span><br><span class="line">        reverse(nums, nums.length-k, nums.length-<span class="number">1</span>);</span><br><span class="line">        reverse(nums, <span class="number">0</span>, nums.length-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = temp;</span><br><span class="line">            i++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p><strong>复杂度分析(Complexity Analysis)</strong>:</p><ul><li>时间复杂度(Time complexity): $O(n)$</li><li>空间复杂度(Space complexity): $O(1)$</li></ul><p>Submission status:</p><blockquote><p>代码提交运行时间: <code>0 ms</code>, 击败<code>100%</code>的<code>java</code>提交代码。</p></blockquote><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在处理数组问题时，需要非常小心，时刻注意边界，避免发生数组越界问题。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。&lt;br&gt;链接:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/rotate-array/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://leetcode-cn.com/problems/rotate-array/&lt;/a&gt;(中文)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/rotate-array/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://leetcode.com/problems/rotate-array/&lt;/a&gt;(en)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;示例 1:&lt;/p&gt;
+&lt;p&gt;输入: [1,2,3,4,5,6,7] 和 k = 3&lt;br&gt;输出: [5,6,7,1,2,3,4]&lt;br&gt;解释:&lt;br&gt;向右旋转 1 步: [7,1,2,3,4,5,6]&lt;br&gt;向右旋转 2 步: [6,7,1,2,3,4,5]&lt;br&gt;向右旋转 3 步: [5,6,7,1,2,3,4]&lt;br&gt;示例 2:&lt;/p&gt;
+&lt;p&gt;输入: [-1,-100,3,99] 和 k = 2&lt;br&gt;输出: [3,99,-1,-100]&lt;br&gt;解释:&lt;br&gt;向右旋转 1 步: [99,-1,-100,3]&lt;br&gt;向右旋转 2 步: [3,99,-1,-100]&lt;br&gt;说明:&lt;/p&gt;
+&lt;p&gt;尽可能想出更多的解决方案，至少有三种不同的方法可以解决这个问题。&lt;br&gt;要求使用空间复杂度为 O(1) 的原地算法。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Leetcode" scheme="http://rovo98.github.io/categories/Leetcode/"/>
+    
+    
+      <category term="leetcode-array-easy" scheme="http://rovo98.github.io/tags/leetcode-array-easy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Advantrue 1 - Leetcode 11 - Container With Most Water</title>
     <link href="http://rovo98.github.io/posts/dac7fdaa/"/>
     <id>http://rovo98.github.io/posts/dac7fdaa/</id>
@@ -521,28 +553,6 @@
     
     
       <category term="leetcode-array-easy" scheme="http://rovo98.github.io/tags/leetcode-array-easy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>\[Notice\]</title>
-    <link href="http://rovo98.github.io/posts/4fa140f4/"/>
-    <id>http://rovo98.github.io/posts/4fa140f4/</id>
-    <published>2017-08-23T16:00:00.000Z</published>
-    <updated>2018-11-06T08:17:33.505Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><font size="5px" color="#ccc">(　◜◡‾) 为了有更好的显示效果，建议使用桌面端打开! (‾◡◝　)</font></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;font size=&quot;5px&quot; color=&quot;#ccc&quot;&gt;(　◜◡‾) 为了有更好的显示效果，建议使用桌面端打开! (‾◡◝　)&lt;/font&gt;&lt;/blockquote&gt;
-
-      
-    
-    </summary>
-    
     
   </entry>
   

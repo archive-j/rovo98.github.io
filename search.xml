@@ -142,6 +142,11 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[\[Notice\]]]></title>
+    <url>%2Fposts%2F4fa140f4%2F</url>
+    <content type="text"><![CDATA[👉 为了有更好的显示效果，建议使用桌面端进行浏览!👆]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[CentOS7通过yum(yellow dog update modifier) 安装mysql5.7]]></title>
     <url>%2Fposts%2F86d29d2c%2F</url>
     <content type="text"><![CDATA[配置yum源1234# 下载mysql安装源包root @~&gt; wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm# 安装mysql源root @~&gt; yum localinstall mysql57-community-release-el7-8.noarch.rpm 检查mysql源是否安装成功: 1root @~&gt; yum repolist enabled | grep "mysql.*-community.*" 如下图则安装成功: 安装mysql1root@ ~&gt; yum install -y mysql-community-server 启动MySQL服务并设置开机自动启动1root@ ~&gt; systemctl start mysqld 查看MySQL启动状态 12root@ ~&gt; systemctl enable mysqldroot@ ~&gt; systemctl daemon-reload 修改默认密码刚安装完的mysql会自动给root用户分配一个临时密码，而且必须重新设置密码(从5.5版本开始) 先查看root用户的临时密码 1root@ ~&gt; grep "temporary password" /var/log/mysqld.log 使用临时的密码登录进mysql来设置新的密码 1mysql&gt; set PASSWORD = PASSWORD('[YOUR_NEW_PASSWORD]') 可能遇到的问题：设置的密码过于简单mysql报错: 1Your password does not satisfy the current policy requirements. 解决方法：由于刚安装的mysql的密码默认强度是最高的，若想要设置简单的密码就要修改validate_password_policy的值， validate_password_policy有以下取值： Policy Tests Performed 0 or LOW Length 1 or MEDIUM Length;numeric,lowercase/uppercase,and special characters 2 or STRONG Length;numeric,lowercase/uppercase,and special characters; dictionary file 操作： 设置安全级别 1mysql&gt; set global validate_password_policy=0; 设置密码长度为8，可以设置为其他值，最小为4位 1mysql&gt; set global validate_password_length=4; 之后就可以设置简单的密码了。 允许root远程登录12mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '[YOUR_PASSWORD]' WITH GRANT OPTION;mysql&gt; flush privileges; 修改字符集编码为UTF-8 查看当前字符编码 1mysql&gt; show variables like "char%'; 检测是否都是utf-8(filesystem除外)，如果不是就需要修改。 character_set_server一般是lantin1。 12345678# 停止mysqld服务systemctl stop mysqld# 进入my.cnf文件，一般是/etc/路径下vim /etc/my.cnf# 在[mysqld]下追加character-set-server=utf-8# 在[mysql]下追加default-character-set=utf-8# 启动mysqldsystemctl start mysqld]]></content>
@@ -266,11 +271,6 @@
       <tags>
         <tag>leetcode-array-easy</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[\[Notice\]]]></title>
-    <url>%2Fposts%2F4fa140f4%2F</url>
-    <content type="text"><![CDATA[( ◜◡‾) 为了有更好的显示效果，建议使用桌面端打开! (‾◡◝ )]]></content>
   </entry>
   <entry>
     <title><![CDATA[Java Reflection]]></title>
